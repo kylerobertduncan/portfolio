@@ -1,0 +1,41 @@
+{
+  "colorForeground": "#000000",
+  "colorPaper": "#FFFFFF",
+  "colorBackground": "#8E9775",
+  "colorWater": "#5F939A",
+  "colorShallow": "#87A7B3",
+  "colorRivers": "#87A7B3",
+  "colorLightWood": "#565D47",
+  "colorDarkWood": "#4A503D",
+  "colorMountain": "#BBBBBB",
+  "colorDanger": "#E6D5B8",
+  "colorWalls": "#C8C2BC",
+  "colorRoofs": "#CC9B6D",
+  "colorFlags": "#F33535",
+  "fontTitle": {
+    "face": null,
+    "embedded": "legend_font",
+    "size": 50,
+    "bold": false,
+    "italic": false
+  },
+  "fontLegend": {
+    "face": null,
+    "embedded": "legend_font",
+    "size": 40,
+    "bold": false,
+    "italic": false
+  },
+  "fontPin": {
+    "face": null,
+    "embedded": "pin_font",
+    "size": 25,
+    "bold": false,
+    "italic": false
+  },
+  "lineSpacing": "-20.0",
+  "textOutline": "true",
+  "enumPenSet": "Default",
+  "enumShading": "Hatching",
+  "floatAlpha": "0.5"
+}

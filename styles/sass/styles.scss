@@ -1,0 +1,25 @@
+@import 'setup';
+
+body {
+  font-size: 125%;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+}
+
+header .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.robert {
+  font-weight: 200;
+}

@@ -1,0 +1,44 @@
+Font: Raleway ?
+
+kyle<span>robert</span>duncan
+- where span = not bold
+- collapses to 'krd'
+
+Alternate black and white sections
+Mostly monotone, white sections have bright accents, black has pastel
+
+Map Ideas
+- https://www.behance.net/search/projects/?tracking_source=typeahead_search_direct&search=town%20map
+- https://creativemarket.com/search?q=fantasy+map
+- https://creativemarket.com/eliza%C2%B4sworkshop/3774704-Maps-Everywhere-map-creator#fullscreen
+- https://creativemarket.com/GeoImages/1822522-Make-your-own-fantasy-or-treasure-maps#fullscreen
+- https://creativemarket.com/Kalinin/4684717-Adventure-island-map.-Board-game.#fullscreen
+
+REQUIREMENTS
+Minimum 3 portfolio items
+Cannot use React
+
+Social buttons only in contact section
+
+// SECTIONS
+Header
+- Kyle Robert Duncan
+- Web Developer
+- indicate scroll if 100vh
+
+Bio
+- 500 words max
+- include photo
+
+Skills
+- Room to add Skills
+
+Portfolio
+- Distinct projects
+- Live & Github links
+- Previews use same mockup
+
+Footer
+- Email & contact form
+- Social links
+- Resume attached (optional)
