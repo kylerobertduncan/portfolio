@@ -257,10 +257,9 @@ img {
 }
 
 header {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 10px 0;
   width: 100%;
-  z-index: 10;
 }
 header .flex {
   display: -webkit-box;
