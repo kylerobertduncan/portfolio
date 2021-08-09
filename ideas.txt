@@ -26,7 +26,7 @@ Header
 - Web Developer
 - indicate scroll if 100vh
 
-Bio
+About
 - 500 words max
 - include photo
 
