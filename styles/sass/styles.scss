@@ -3,11 +3,14 @@
 @import 'variables';
 
 // GENERAL STYLES
+html {
+  height: 100vh;
+}
+
 body {
   background-color: $Water;
   font-size: 125%;
-  height: 100vh;
-  position: relative;
+  // position: relative;
 }
 
 h1, h2 {
@@ -26,12 +29,12 @@ img {
 
 // HEADER SECTION
 header {
-  background-color: rgba(255,255,255,0.7);
-  // position: fixed;
-  //   top: 0;
+  background-color: rgba(255,255,255,0.2);
+  position: fixed;
+    top: 0;
   padding: 10px 0;
   width: 100%;
-  // z-index: 10;
+  z-index: 10;
   .flex {
     display: flex;
     justify-content: space-between;
@@ -44,37 +47,60 @@ header {
 }
 
 // MAIN SECTION
+main {
+  margin: 0 auto;
+}
+
 .grid {
   display: grid;
-  grid-auto-flow: dense;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  // add minmax to set min value
+  // grid-auto-flow: dense;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-template-rows: repeat(3, minmax(200px, 1fr));
+  // fixed max value doesn't work to keep buttons in place...
 }
 
 .skillsIsland {
-  grid-column: span 2 / -2;
-  grid-row: 2 / span 2;
+  grid-column: span 2 / -1;
+  grid-row: span 2 / -1;
 }
 
 .aboutIsland {
-  grid-column: 2 / span 2;
-  grid-row: span 2 / -1;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
   position: relative;
+}
+
+.projectsIsland {
+  grid-column-end: -2;
+  grid-row-start: 1;
+}
+
+.contactIsland {
+  grid-column-start: 2;
+  grid-row-end: -1;
 }
 
 .linkButton {
   color: $Flags;
+  background-color: transparent;
+  // border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 800;
+  height: 150px;
+  width: 150px;
   position: absolute;
-  top: 20%;
-  right: 50%;
+    bottom: 35%;
+    left: 15%;
+  &:hover {
+    background-color: rgba(255, 255, 0, 0.5);
+  }
 }
 
-.projectsIsland {
-  grid-column: 2;
-}
-
-.contactIsland {
-  grid-column: 4;
-  grid-row: 2;
+.linkButton::after {
+  content: "About";
+  height: 25px;
+  position: absolute;
+    bottom: -25px;
+    left: 20%;
 }
