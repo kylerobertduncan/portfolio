@@ -3,14 +3,18 @@
 @import 'variables';
 
 // GENERAL STYLES
+html {
+  height: 100vh;
+}
+
 body {
   background-color: $Water;
   font-size: 125%;
-  height: 100vh;
-  position: relative;
+  // overflow-y: hidden;
 }
 
-h1, h2 {
+h1, h2, button {
+  font-family: $raleway;
   margin: 0;
 }
 
@@ -25,56 +29,105 @@ img {
 }
 
 // HEADER SECTION
-header {
-  background-color: rgba(255,255,255,0.7);
-  // position: fixed;
-  //   top: 0;
-  padding: 10px 0;
-  width: 100%;
-  // z-index: 10;
-  .flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-} 
-
-.robert {
-  font-weight: 200;
-}
+@import 'header';
 
 // MAIN SECTION
 .grid {
   display: grid;
-  grid-auto-flow: dense;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  // add minmax to set min value
-}
-
-.skillsIsland {
-  grid-column: span 2 / -2;
-  grid-row: 2 / span 2;
-}
-
-.aboutIsland {
-  grid-column: 2 / span 2;
-  grid-row: span 2 / -1;
-  position: relative;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-template-rows: repeat(3, minmax(200px, 1fr));
 }
 
 .linkButton {
-  color: $Flags;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  height: 20%;
+  width: 20%;
   position: absolute;
-  top: 20%;
-  right: 50%;
+  transition: background-color 0.5s;
+  &:focus,
+  &:hover {
+    background-color: rgba(230,213,184,0.25);
+  }
+  &::after {
+    font-size: 2rem;
+    font-weight: 700;
+    height: 32px;
+    padding: 5px;
+    position: absolute;
+    bottom: calc(50% - 16px);
+  }
 }
 
-.projectsIsland {
-  grid-column: 2;
+@import 'aboutIsland';
+@import 'skillsIsland';
+@import 'projectIsland';
+@import 'contactIsland';
+
+// MODAL SECTIONS
+
+.modal {
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
-.contactIsland {
-  grid-column: 4;
-  grid-row: 2;
+.hidden {
+  display: none;
 }
+
+// ABOUT SECTION
+
+// testing universal modal attributes
+.about {
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  div {
+    background-color: rgba(255,255,255,0.66);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px black;
+    padding: 50px;
+    position: relative;
+    height: 80%;
+    width: 80%;
+    .closeModal {
+      background: $Background;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 4px 4px black;
+      color: ghostwhite;
+      padding: 20px;
+      position: absolute;
+      bottom: 50px;
+      right: 50px;
+      transition: all 0.1s;
+      &:active {
+        box-shadow: 2px 2px black;
+        transform: translate(2px, 2px)
+      }
+    }
+  }
+}
+
+/*
+
+TO DO
+- build modals for 'links;
+
+*/

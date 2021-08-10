@@ -1,0 +1,26 @@
+// HEADER SECTION
+header {
+  background-color: rgba(255,255,255,0.25);
+  position: fixed;
+    top: 0;
+  padding: 10px 0;
+  width: 100%;
+  z-index: 10;
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+h1 {
+  font-size: 2.75rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.light {
+  font-weight: 200;
+}

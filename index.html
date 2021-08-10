@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/styles.css">
   <title>kylerobertduncan</title>
 </head>
@@ -11,32 +14,50 @@
 
   <header>
     <div class="flex wrapper">
-      <h1>kyle<span class="robert">robert</span>duncan</h1>
-      <h2>web developer</h2>
+      <h1>kyle<span class="light">robert</span>duncan</h1>
+      <h2><span class="light">front end</span> web developer</h2>
     </div>
   </header>
 
   <main>
-    <div class="grid">
 
-      <div class="skillsIsland">
-        <img src="./assets/maps/MED-donland.png" alt="">
-      </div>
+    <section class="grid wrapper">
 
       <div class="aboutIsland">
-        <img src="./assets/maps/MED-copper_isle.png" alt="">
-        <button class="linkButton">About</button>
+        <img src="./assets/cities/MED_shifting_archipelago_CITY.png" alt="">
+        <button class="linkButton aboutButton" aria-label="About"></button>
+      </div>
+
+      <div class="skillsIsland">
+        <img src="./assets/cities/MED_saenholm_CITY.png" alt="">
+        <button class="linkButton skillsButton" aria-label="Skills"></button>
       </div>
       
       <div class="projectsIsland">
-        <img src="./assets/maps/peraholm.png" alt="">
+        <img src="./assets/cities/stafte_island_CITY.png" alt="">
+        <button class="linkButton projectsButton" aria-label="Projects"></button>
       </div>
 
       <div class="contactIsland">
-        <img src="./assets/maps/stoneia.png" alt="">
+        <img src="./assets/cities/dioduredholm_CITY.png" alt="">
+        <button class="linkButton contactButton" aria-label="Contact"></button>
       </div>
 
-    </div>
+    </section>
+
+    <section class="about"> 
+      <!-- add "hidden modal" to classes -->
+      <div class="wrapper">
+        <h2>about me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis laudantium iusto vitae? Error quam neque numquam, eum, quia tempore, culpa provident repellendus dignissimos eos doloremque?</p>
+        <button class="closeModal">close</button>
+      </div>
+    </section>
+
+    <section class="skills hidden modal"></section>
+    <section class="projects hidden modal"></section>
+    <section class="contact hidden modal"></section>
+
   </main>
   
 </body>

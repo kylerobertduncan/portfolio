@@ -1,0 +1,17 @@
+.projectsIsland {
+  grid-column-end: -2;
+  grid-row-start: 1;
+  position: relative;
+}
+
+.projectsButton {
+  height: 40%;
+  width: 40%;
+  top: 28%;
+  right: 21%;
+  z-index: 20;
+  &::after {
+    content: "projects";
+    left: -100px;
+  }
+}
