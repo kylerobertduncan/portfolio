@@ -1,0 +1,16 @@
+.contactIsland {
+  grid-column-start: 2;
+  grid-row-end: -1;
+  position: relative;
+}
+
+.contactButton {
+  height: 40%;
+  width: 40%;
+  top: 28%;
+  right: 1%;
+  &::after {
+    content: "contact";
+    right: -85px;
+  }
+}
