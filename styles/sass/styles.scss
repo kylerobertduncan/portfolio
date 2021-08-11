@@ -60,74 +60,10 @@ img {
   }
 }
 
-@import 'aboutIsland';
-@import 'skillsIsland';
-@import 'projectIsland';
-@import 'contactIsland';
+@import 'islandStyles';
 
 // MODAL SECTIONS
 
-.modal {
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
-
-.hidden {
-  display: none;
-}
+@import 'modalStyles';
 
 // ABOUT SECTION
-
-// testing universal modal attributes
-.about {
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  div {
-    background-color: rgba(255,255,255,0.66);
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px 5px black;
-    padding: 50px;
-    position: relative;
-    height: 80%;
-    width: 80%;
-    .closeModal {
-      background: $Background;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 4px 4px black;
-      color: ghostwhite;
-      padding: 20px;
-      position: absolute;
-      bottom: 50px;
-      right: 50px;
-      transition: all 0.1s;
-      &:active {
-        box-shadow: 2px 2px black;
-        transform: translate(2px, 2px)
-      }
-    }
-  }
-}
-
-/*
-
-TO DO
-- build modals for 'links;
-
-*/

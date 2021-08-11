@@ -19,46 +19,70 @@
     </div>
   </header>
 
-  <main>
+  <main class="grid wrapper"  aria-hidden="false">
 
-    <section class="grid wrapper">
+    <div class="aboutIsland">
+      <img src="./assets/cities/MED_shifting_archipelago_CITY.png" alt="">
+      <button class="linkButton aboutButton" aria-label="About" value="about"></button>
+    </div>
 
-      <div class="aboutIsland">
-        <img src="./assets/cities/MED_shifting_archipelago_CITY.png" alt="">
-        <button class="linkButton aboutButton" aria-label="About"></button>
-      </div>
+    <div class="skillsIsland">
+      <img src="./assets/cities/MED_saenholm_CITY.png" alt="">
+      <button class="linkButton skillsButton" aria-label="Skills" value="skills"></button>
+    </div>
+    
+    <div class="projectsIsland">
+      <img src="./assets/cities/stafte_island_CITY.png" alt="">
+      <button class="linkButton projectsButton" aria-label="Projects" value="projects"></button>
+    </div>
 
-      <div class="skillsIsland">
-        <img src="./assets/cities/MED_saenholm_CITY.png" alt="">
-        <button class="linkButton skillsButton" aria-label="Skills"></button>
-      </div>
-      
-      <div class="projectsIsland">
-        <img src="./assets/cities/stafte_island_CITY.png" alt="">
-        <button class="linkButton projectsButton" aria-label="Projects"></button>
-      </div>
-
-      <div class="contactIsland">
-        <img src="./assets/cities/dioduredholm_CITY.png" alt="">
-        <button class="linkButton contactButton" aria-label="Contact"></button>
-      </div>
-
-    </section>
-
-    <section class="about"> 
-      <!-- add "hidden modal" to classes -->
-      <div class="wrapper">
-        <h2>about me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis laudantium iusto vitae? Error quam neque numquam, eum, quia tempore, culpa provident repellendus dignissimos eos doloremque?</p>
-        <button class="closeModal">close</button>
-      </div>
-    </section>
-
-    <section class="skills hidden modal"></section>
-    <section class="projects hidden modal"></section>
-    <section class="contact hidden modal"></section>
+    <div class="contactIsland">
+      <img src="./assets/cities/dioduredholm_CITY.png" alt="">
+      <button class="linkButton contactButton" aria-label="Contact" value="contact"></button>
+    </div>
 
   </main>
+
+  <aside class="modals">
+
+    <section class="about hidden modal" aria-hidden="true" tabindex="0">
+      <div class="wrapper">
+        <h2>about kyle</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis laudantium iusto vitae? Error quam neque numquam, eum, quia tempore, culpa provident repellendus dignissimos eos doloremque?</p>
+        <button class="closeModal aboutClose">close</button>
+      </div>
+    </section>
+
+    <section class="skills hidden modal" aria-hidden="true" tabindex="0">
+      <div class="wrapper">
+        <h2>skills</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis laudantium iusto vitae? Error quam neque numquam,
+          eum, quia tempore, culpa provident repellendus dignissimos eos doloremque?</p>
+        <button class="closeModal skillsClose">close</button>
+      </div>
+    </section>
+    
+    <section class="projects hidden modal" aria-hidden="true" tabindex="0">
+      <div class="wrapper">
+        <h2>projects</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis laudantium iusto vitae? Error quam neque numquam,
+          eum, quia tempore, culpa provident repellendus dignissimos eos doloremque?</p>
+        <button class="closeModal projectsClose">close</button>
+      </div>
+    </section>
+    
+    <section class="contact hidden modal" aria-hidden="true" tabindex="0">
+      <div class="wrapper">
+        <h2>contact kyle</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis laudantium iusto vitae? Error quam neque numquam,
+          eum, quia tempore, culpa provident repellendus dignissimos eos doloremque?</p>
+        <button class="closeModal contactClose">close</button>
+      </div>
+    </section>
+
+  </aside>
+
+  <script src="app.js"></script>
   
 </body>
 </html>

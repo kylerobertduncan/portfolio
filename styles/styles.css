@@ -334,20 +334,21 @@ h2 {
   left: -75px;
 }
 
-.skillsIsland {
-  grid-column: span 2/-1;
-  grid-row: span 2/-1;
+.contactIsland {
+  grid-column-start: 2;
+  grid-row-end: -1;
   position: relative;
 }
 
-.skillsButton {
-  right: 23%;
-  top: 34%;
+.contactButton {
+  height: 40%;
+  width: 40%;
+  top: 28%;
+  right: 1%;
 }
-.skillsButton::after {
-  content: "skills";
-  top: -20px;
-  left: 10%;
+.contactButton::after {
+  content: "contact";
+  right: -85px;
 }
 
 .projectsIsland {
@@ -368,21 +369,20 @@ h2 {
   left: -100px;
 }
 
-.contactIsland {
-  grid-column-start: 2;
-  grid-row-end: -1;
+.skillsIsland {
+  grid-column: span 2/-1;
+  grid-row: span 2/-1;
   position: relative;
 }
 
-.contactButton {
-  height: 40%;
-  width: 40%;
-  top: 28%;
-  right: 1%;
+.skillsButton {
+  right: 23%;
+  top: 34%;
 }
-.contactButton::after {
-  content: "contact";
-  right: -85px;
+.skillsButton::after {
+  content: "skills";
+  top: -20px;
+  left: 10%;
 }
 
 .modal {
@@ -406,33 +406,7 @@ h2 {
   width: 100%;
   z-index: 100;
 }
-
-.hidden {
-  display: none;
-}
-
-.about {
-  background-color: rgba(0, 0, 0, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
-.about div {
+.modal div {
   background-color: rgba(255, 255, 255, 0.66);
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px 5px black;
@@ -442,13 +416,13 @@ h2 {
   height: 80%;
   width: 80%;
 }
-.about div .closeModal {
+.modal div .closeModal {
   background: #8E9775;
   border: none;
   border-radius: 10px;
-  -webkit-box-shadow: 4px 4px black;
-          box-shadow: 4px 4px black;
-  color: ghostwhite;
+  -webkit-box-shadow: 4px 4px #4A503D;
+          box-shadow: 4px 4px #4A503D;
+  color: #4A503D;
   padding: 20px;
   position: absolute;
   bottom: 50px;
@@ -456,16 +430,16 @@ h2 {
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
-.about div .closeModal:active {
-  -webkit-box-shadow: 2px 2px black;
-          box-shadow: 2px 2px black;
+.modal div .closeModal:active {
+  -webkit-box-shadow: 2px 2px #4A503D;
+          box-shadow: 2px 2px #4A503D;
   -webkit-transform: translate(2px, 2px);
           transform: translate(2px, 2px);
 }
+.modal div .closeModal:focus, .modal div .closeModal:hover {
+  color: ghostwhite;
+}
 
-/*
-
-TO DO
-- build modals for 'links;
-
-*/
+.hidden {
+  display: none;
+}

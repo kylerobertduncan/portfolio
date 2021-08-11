@@ -1,0 +1,69 @@
+// ABOUT
+.aboutIsland {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  position: relative;
+}
+
+.aboutButton {
+  bottom: 35%;
+  left: 14%;
+  &::after {
+    content: "about";
+    left: -75px;
+  }
+}
+
+// CONTACT
+.contactIsland {
+  grid-column-start: 2;
+  grid-row-end: -1;
+  position: relative;
+}
+
+.contactButton {
+  height: 40%;
+  width: 40%;
+  top: 28%;
+  right: 1%;
+  &::after {
+    content: "contact";
+    right: -85px;
+  }
+}
+
+// PROJECTS
+.projectsIsland {
+  grid-column-end: -2;
+  grid-row-start: 1;
+  position: relative;
+}
+
+.projectsButton {
+  height: 40%;
+  width: 40%;
+  top: 28%;
+  right: 21%;
+  z-index: 20;
+  &::after {
+    content: "projects";
+    left: -100px;
+  }
+}
+
+// SKILLS
+.skillsIsland {
+  grid-column: span 2 / -1;
+  grid-row: span 2 / -1;
+  position: relative;
+}
+
+.skillsButton {
+  right: 23%;
+  top: 34%;
+  &::after {
+    content: "skills";
+    top: -20px;
+    left: 10%;
+  }
+}
