@@ -1,0 +1,19 @@
+@import 'variables';
+
+// background-image: 
+//   linear-gradient(rgba(255, 255, 255, 0.75)),
+//   url('../assets/villages/LG-dungeon.png');
+// background-position: center;
+// // background-size: cover;
+
+.contact {
+  text-align: center;
+  h2 {
+    margin-bottom: 20px;
+  }
+  .contactIcons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 50px;
+  }
+}

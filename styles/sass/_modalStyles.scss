@@ -12,13 +12,14 @@
   width: 100%;
   z-index: 100;
   & > div {
-    background-color: rgba(255,255,255,0.66);
+    background-color: rgba(255,255,255,0.75);
     border-radius: 20px;
     box-shadow: 5px 5px 5px 5px black;
-    padding: 100px;
+    padding: 75px;
     position: relative;
-    height: 80%;
-    width: 80%;
+    // add h/w to individual modals as needed?
+    // height: 80%;
+    // width: 80%;
     .closeModal {
       background: $Background;
       border: none;
@@ -27,8 +28,8 @@
       color: $DarkWood;
       padding: 20px;
       position: absolute;
-      bottom: 50px;
-      right: 50px;
+      top: -20px;
+      right: -20px;
       transition: all 0.1s;
       &:active {
         box-shadow: 2px 2px $DarkWood;
@@ -46,5 +47,9 @@
   display: none;
 }
 
-@import 'aboutModal';
-@import 'skillsModal';
+.iconDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }

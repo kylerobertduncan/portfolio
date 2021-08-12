@@ -73,3 +73,22 @@ app.init = () => {
   app.openButtons();
 }
 app.init();
+
+
+/*
+
+mailto alternative
+<script>
+// Open mailto links in a new tab
+function mailto(email, subject, body) {
+  var url;
+  url = 'mailto:' + email;
+  url += '?subject=' + subject;
+  url += '&body=' + body;
+  window.open(url);
+}
+</script>
+
+<a href="#" onclick="mailto('test@gmail.com', 'Subject', 'Body');event.preventDefault()">test@gmail.com</a>
+
+*/
