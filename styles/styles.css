@@ -235,35 +235,25 @@ html {
   overflow: hidden;
 }
 
-html {
-  height: 100vh;
-}
-
-body {
-  height: 100%;
-}
-
-main {
-  height: 100%;
-}
-
 body {
   background-color: #5F939A;
   cursor: default;
   font-size: 125%;
 }
 
-h1, h2, h3, p, button {
+h1, h2, button {
   font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+h3, a, p {
+  font-family: "Bitter", serif;
   margin: 0;
 }
 
 img {
   display: block;
-  max-height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 a {
@@ -287,7 +277,7 @@ button {
 }
 
 header {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.5);
   position: fixed;
   top: 0;
   padding: 10px 0;
@@ -515,6 +505,7 @@ h2 {
 }
 .projectsGrid .projectDiv .links a {
   border: 2px solid transparent;
+  font-weight: 500;
   padding: 5px 10px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -573,4 +564,23 @@ h2 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin-top: 50px;
+}
+.contact a {
+  padding: 10px;
+}
+.contact a:focus, .contact a:hover {
+  -webkit-text-decoration: 2px #565D47 underline;
+          text-decoration: 2px #565D47 underline;
+}
+.contact .flex {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }

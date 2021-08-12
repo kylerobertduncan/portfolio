@@ -1,11 +1,5 @@
 @import 'variables';
 
-// background-image: 
-//   linear-gradient(rgba(255, 255, 255, 0.75)),
-//   url('../assets/villages/LG-dungeon.png');
-// background-position: center;
-// // background-size: cover;
-
 .contact {
   text-align: center;
   h2 {
@@ -15,5 +9,18 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     margin-top: 50px;
+  }
+  a {
+    padding: 10px;
+    &:focus,
+    &:hover {
+      text-decoration: 2px $LightWood underline;
+    }
+  }
+  .flex {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
   }
 }

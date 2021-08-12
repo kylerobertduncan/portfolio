@@ -3,35 +3,25 @@
 @import 'variables';
 
 // GENERAL STYLES
-html { 
-  height: 100vh;
-}
-
-body { 
-  height: 100%;
-}
-
-main {
-  height: 100%;
-}
-
 body {
   background-color: $Water;
   cursor: default;
   font-size: 125%;
-  // overflow-y: hidden;
 }
 
-h1, h2, h3, p, button {
+h1, h2, button {
   font-family: $raleway;
+  margin: 0;
+}
+
+h3, a, p {
+  font-family: $bitter;
   margin: 0;
 }
 
 img {
   display: block;
-  max-height: 100%;
   width: 100%;
-  object-fit: cover;
 }
 
 a {
@@ -48,25 +38,21 @@ button {
   max-width: 100px;
 }
 
-// .smallIcon {
-//   max-width: 50px;
-// }
-
 .wrapper {
   margin: 0 auto;
   max-width: calc((100vh / 3) * 4);
   width: 90%;
 }
 
-// HEADER SECTION
+// HEADER & FOOTER SECTIONS
 @import 'header';
 
 // MAIN SECTION
 .grid {
   display: grid;
   // grid-template-columns: repeat(4, minmax(200px, 300px));
-  grid-template-columns: repeat(4, calc(100vh / 3));
   // grid-template-rows: repeat(3, minmax(200px, 300px));
+  grid-template-columns: repeat(4, calc(100vh / 3));
   grid-template-rows: repeat(3, calc(100vh / 3));
 }
 
@@ -95,16 +81,8 @@ button {
 @import 'islandStyles';
 
 // MODAL STYLES
-@import 'modalStyles';
-
-// PROJECTS MODAL
-@import 'projectsModal';
-
-// ABOUT MODAL
-@import 'aboutModal';
-
-// SKILLS MODAL
-@import 'skillsModal';
-
-// CONTACT MODAL
-@import 'contactModal';
+@import 'modalStyles'; // GENERAL STYLES
+@import 'projectsModal'; // PROJECTS MODAL
+@import 'aboutModal'; // ABOUT MODAL
+@import 'skillsModal'; // SKILLS MODAL
+@import 'contactModal'; // CONTACT MODAL
