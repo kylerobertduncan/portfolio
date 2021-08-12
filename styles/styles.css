@@ -280,10 +280,6 @@ button {
   max-width: 100px;
 }
 
-.smallIcon {
-  max-width: 50px;
-}
-
 .wrapper {
   margin: 0 auto;
   max-width: calc((100vh / 3) * 4);
@@ -473,7 +469,8 @@ h2 {
   display: none;
 }
 
-.iconDiv {
+.iconDiv,
+.projectDiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,6 +484,45 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.projectsGrid {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.25))), url("../assets/villages/extra-city-map.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.25)), url("../assets/villages/extra-city-map.png");
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 50px;
+}
+.projectsGrid .projectDiv a {
+  border: 5px solid #E6D5B8;
+  border-radius: 10px;
+  -webkit-transition: border 0.2s;
+  transition: border 0.2s;
+  width: 75%;
+}
+.projectsGrid .projectDiv a:focus, .projectsGrid .projectDiv a:hover {
+  border: 5px solid #565D47;
+}
+.projectsGrid .projectDiv h3 {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin: 10px 0 20px;
+  padding: 5px 10px;
+  text-align: center;
+  width: 75%;
+}
+.projectsGrid .projectDiv .links a {
+  border: 2px solid transparent;
+  padding: 5px 10px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.projectsGrid .projectDiv .links a:focus, .projectsGrid .projectDiv .links a:hover {
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid #565D47;
+  border-radius: 10px;
 }
 
 .aboutFlex {
