@@ -3,8 +3,16 @@
 @import 'variables';
 
 // GENERAL STYLES
-html {
+html { 
   height: 100vh;
+}
+
+body { 
+  height: 100%;
+}
+
+main {
+  height: 100%;
 }
 
 body {
@@ -13,18 +21,21 @@ body {
   // overflow-y: hidden;
 }
 
-h1, h2, button {
+h1, h2, p, button {
   font-family: $raleway;
   margin: 0;
 }
 
 img {
+  display: block;
+  max-height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: calc((100vh / 3) * 4);
   width: 90%;
 }
 
@@ -34,8 +45,10 @@ img {
 // MAIN SECTION
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
-  grid-template-rows: repeat(3, minmax(200px, 1fr));
+  // grid-template-columns: repeat(4, minmax(200px, 300px));
+  grid-template-columns: repeat(4, calc(100vh / 3));
+  // grid-template-rows: repeat(3, minmax(200px, 300px));
+  grid-template-rows: repeat(3, calc(100vh / 3));
 }
 
 .linkButton {

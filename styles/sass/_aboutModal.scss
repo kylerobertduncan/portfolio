@@ -1,0 +1,17 @@
+.aboutFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & > div {
+    width: 50%;
+  }
+  img {
+    border-radius: 50%;
+    margin: 0 5%;
+    width: 40%;
+  }
+  p {
+    line-height: 1.5;
+    margin: 5% 0;
+  }
+}

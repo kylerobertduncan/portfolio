@@ -240,22 +240,34 @@ html {
 }
 
 body {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+body {
   background-color: #5F939A;
   font-size: 125%;
 }
 
-h1, h2, button {
+h1, h2, p, button {
   font-family: "Raleway", sans-serif;
   margin: 0;
 }
 
 img {
+  display: block;
+  max-height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: calc((100vh / 3) * 4);
   width: 90%;
 }
 
@@ -293,8 +305,8 @@ h2 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
-  grid-template-rows: repeat(3, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, calc(100vh / 3));
+  grid-template-rows: repeat(3, calc(100vh / 3));
 }
 
 .linkButton {
@@ -406,17 +418,17 @@ h2 {
   width: 100%;
   z-index: 100;
 }
-.modal div {
+.modal > div {
   background-color: rgba(255, 255, 255, 0.66);
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px 5px black;
           box-shadow: 5px 5px 5px 5px black;
-  padding: 50px;
+  padding: 100px;
   position: relative;
   height: 80%;
   width: 80%;
 }
-.modal div .closeModal {
+.modal > div .closeModal {
   background: #8E9775;
   border: none;
   border-radius: 10px;
@@ -430,16 +442,44 @@ h2 {
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
-.modal div .closeModal:active {
+.modal > div .closeModal:active {
   -webkit-box-shadow: 2px 2px #4A503D;
           box-shadow: 2px 2px #4A503D;
   -webkit-transform: translate(2px, 2px);
           transform: translate(2px, 2px);
 }
-.modal div .closeModal:focus, .modal div .closeModal:hover {
+.modal > div .closeModal:focus, .modal > div .closeModal:hover {
   color: ghostwhite;
 }
 
 .hidden {
   display: none;
+}
+
+.aboutFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.aboutFlex > div {
+  width: 50%;
+}
+.aboutFlex img {
+  border-radius: 50%;
+  margin: 0 5%;
+  width: 40%;
+}
+.aboutFlex p {
+  line-height: 1.5;
+  margin: 5% 0;
+}
+
+.skills > div {
+  background-image: url("../../assets/villages/LG-dungeon.png");
 }
