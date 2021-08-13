@@ -21,23 +21,28 @@
     // height: 80%;
     // width: 80%;
     .closeModal {
-      background: $Background;
+      background-color: transparent;
       border: none;
-      border-radius: 10px;
-      box-shadow: 4px 4px $DarkWood;
-      color: $DarkWood;
-      padding: 20px;
+      border-radius: 50%;
+      padding: 8px 12px 12px 8px;      
       position: absolute;
-      top: -20px;
-      right: -20px;
-      transition: all 0.1s;
-      &:active {
-        box-shadow: 2px 2px $DarkWood;
-        transform: translate(2px, 2px)
+      top: -25px;
+      right: -25px;
+      transition: background-color 0.5s;
+      img {
+        border-radius: 50%;
+        box-shadow: 4px 4px $DarkWood;
+        height: 50px;
+        width: 50px;
+        transition: all 0.1s;
       }
       &:focus,
       &:hover {
-        color: ghostwhite;
+        background-color: rgba(255,255,255,0.25);
+      }
+      &:active img {
+        box-shadow: 2px 2px $DarkWood;
+        transform: translate(2px, 2px)
       }
     }
   }

@@ -271,7 +271,8 @@ button {
 }
 
 .icon {
-  max-width: 100px;
+  margin-bottom: 10px;
+  max-width: 90px;
 }
 
 .wrapper {
@@ -436,27 +437,33 @@ h2 {
   position: relative;
 }
 .modal > div .closeModal {
-  background: #8E9775;
+  background-color: transparent;
   border: none;
-  border-radius: 10px;
+  border-radius: 50%;
+  padding: 8px 12px 12px 8px;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.modal > div .closeModal img {
+  border-radius: 50%;
   -webkit-box-shadow: 4px 4px #4A503D;
           box-shadow: 4px 4px #4A503D;
-  color: #4A503D;
-  padding: 20px;
-  position: absolute;
-  top: -20px;
-  right: -20px;
+  height: 50px;
+  width: 50px;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
-.modal > div .closeModal:active {
+.modal > div .closeModal:focus, .modal > div .closeModal:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.modal > div .closeModal:active img {
   -webkit-box-shadow: 2px 2px #4A503D;
           box-shadow: 2px 2px #4A503D;
   -webkit-transform: translate(2px, 2px);
           transform: translate(2px, 2px);
-}
-.modal > div .closeModal:focus, .modal > div .closeModal:hover {
-  color: ghostwhite;
 }
 
 .hidden {
@@ -487,7 +494,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 50px;
+  gap: 20px;
 }
 
 .projectDiv {
@@ -500,10 +507,8 @@ h2 {
   border: 5px solid #E6D5B8;
   border-radius: 10px;
   padding: 20px;
-  height: 100%;
-  width: 80%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  min-height: 230px;
+  width: 90%;
 }
 .projectDiv .screenShot p {
   font-size: 1.1rem;
@@ -522,21 +527,25 @@ h2 {
   margin: 10px 0 20px;
   padding: 5px 10px;
   text-align: center;
-  width: 80%;
+  width: 90%;
 }
 .projectDiv .gitLink {
   border-radius: 50%;
+  -webkit-box-shadow: 3px 3px 3px #4A503D;
+          box-shadow: 3px 3px 3px #4A503D;
   height: 50px;
   width: 50px;
   position: absolute;
   top: -20px;
-  right: calc(10% - 20px);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  right: calc(5% - 20px);
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
 .projectDiv .gitLink:focus, .projectDiv .gitLink:hover {
-  background: rgba(255, 255, 255, 0.5);
-  border: 2px solid #565D47;
+  -webkit-box-shadow: 3px 3px 3px #E6D5B8;
+          box-shadow: 3px 3px 3px #E6D5B8;
 }
 .projectDiv .gitLink img {
   height: 100%;
