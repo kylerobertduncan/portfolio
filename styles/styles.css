@@ -251,6 +251,10 @@ h3, a, p {
   margin: 0;
 }
 
+p {
+  line-height: 1.6;
+}
+
 img {
   display: block;
   width: 100%;
@@ -477,43 +481,93 @@ h2 {
 }
 
 .projectsGrid {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.25))), url("../assets/villages/extra-city-map.png");
-  background-image: linear-gradient(rgba(255, 255, 255, 0.25)), url("../assets/villages/extra-city-map.png");
+  background-image: url("../assets/villages/extra-city-map.png");
   background-position: center;
+  background-size: cover;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 50px;
 }
-.projectsGrid .projectDiv a {
+
+.projectDiv {
+  position: relative;
+}
+.projectDiv .screenShot {
+  background-position: top;
+  background-size: cover;
+  color: ghostwhite;
   border: 5px solid #E6D5B8;
   border-radius: 10px;
-  -webkit-transition: border 0.2s;
-  transition: border 0.2s;
-  width: 75%;
+  padding: 20px;
+  height: 100%;
+  width: 80%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
-.projectsGrid .projectDiv a:focus, .projectsGrid .projectDiv a:hover {
+.projectDiv .screenShot p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.projectDiv .screenShot:focus, .projectDiv .screenShot:hover {
   border: 5px solid #565D47;
 }
-.projectsGrid .projectDiv h3 {
+.projectDiv .screenShot:focus p, .projectDiv .screenShot:hover p {
+  color: transparent;
+}
+.projectDiv h3 {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   margin: 10px 0 20px;
   padding: 5px 10px;
   text-align: center;
-  width: 75%;
+  width: 80%;
 }
-.projectsGrid .projectDiv .links a {
-  border: 2px solid transparent;
-  font-weight: 500;
-  padding: 5px 10px;
+.projectDiv .gitLink {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -20px;
+  right: calc(10% - 20px);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.projectsGrid .projectDiv .links a:focus, .projectsGrid .projectDiv .links a:hover {
+.projectDiv .gitLink:focus, .projectDiv .gitLink:hover {
   background: rgba(255, 255, 255, 0.5);
   border: 2px solid #565D47;
-  border-radius: 10px;
+}
+.projectDiv .gitLink img {
+  height: 100%;
+  width: 100%;
+}
+
+.fridgePoetry {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/screenshot-fridgepoetry.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/screenshot-fridgepoetry.png");
+}
+.fridgePoetry:focus, .fridgePoetry:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/screenshot-fridgepoetry.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/screenshot-fridgepoetry.png");
+}
+
+.folkAndTales {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/screenshot-folkandtales.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/screenshot-folkandtales.png");
+}
+.folkAndTales:focus, .folkAndTales:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/screenshot-folkandtales.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/screenshot-folkandtales.png");
+}
+
+.walksIntoAtavern {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/screenshot-walksinto.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/screenshot-walksinto.png");
+}
+.walksIntoAtavern:focus, .walksIntoAtavern:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/screenshot-walksinto.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/screenshot-walksinto.png");
 }
 
 .aboutFlex {

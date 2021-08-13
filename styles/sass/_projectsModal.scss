@@ -2,46 +2,106 @@
 
 .projectsGrid {
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.25)),
+    // linear-gradient(rgba(255, 255, 255, 0.25)),
     url('../assets/villages/extra-city-map.png');
   background-position: center;
-  // background-size: cover;
+  background-size: cover;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 50px;
-  .projectDiv {
-    // background-color: ;
-    a {
-      border: 5px solid $Danger;
-      border-radius: 10px;
-      transition: border 0.2s;
-      width: 75%;
-      &:focus,
-      &:hover {
+}
+
+.projectDiv {
+  position: relative;
+  .screenShot {
+    background-position: top;
+    background-size: cover;
+    color: ghostwhite;
+    border: 5px solid $Danger;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    width: 80%;
+    transition: all 0.5s;
+    // transition: border 0.2s;
+    p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+    &:focus,
+    &:hover {
       border: 5px solid $LightWood;
-      }
     }
-    h3 {
-      background: rgba(255, 255, 255, 0.5);
-      border-radius: 10px;
-      margin: 10px 0 20px;
-      padding: 5px 10px;
-      text-align: center;
-      width: 75%;
-      // text-shadow: 2px 2px ghostwhite;
+    &:focus p,
+    &:hover p {
+      color: transparent;
     }
-    .links a {
-      border: 2px solid transparent;
-      font-weight: 500;
-      padding: 5px 10px;
-      transition: all 0.2s;
-      &:focus,
-      &:hover {
-      background: rgba(255, 255, 255, 0.5);
-      border: 2px solid $LightWood;
-      border-radius: 10px;
-      }
+  }
+  h3 {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin: 10px 0 20px;
+    padding: 5px 10px;
+    text-align: center;
+    width: 80%;
+  }
+  .gitLink {
+    // border: 2px solid $DarkWood;
+    border-radius: 50%;
+    // font-weight: 500;
+    // padding: 5px 10px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -20px;
+    right: calc(10% - 20px);
+    transition: all 0.2s;
+    &:focus,
+    &:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid $LightWood;
     }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.fridgePoetry {
+  background-image: 
+    linear-gradient(rgba(86, 93, 71, 0.9)),
+    url('../assets/screenshot-fridgepoetry.png');
+  &:focus,
+  &:hover {
+    background-image: 
+      linear-gradient(rgba(86, 93, 71, 0)),
+      url('../assets/screenshot-fridgepoetry.png');
+  }
+}
+
+.folkAndTales {
+  background-image: 
+    linear-gradient(rgba(86, 93, 71, 0.9)),
+    url('../assets/screenshot-folkandtales.png');
+  &:focus,
+  &:hover {
+    background-image: 
+      linear-gradient(rgba(86, 93, 71, 0)),
+      url('../assets/screenshot-folkandtales.png');
+  }
+}
+
+.walksIntoAtavern {
+  background-image: 
+    linear-gradient(rgba(86, 93, 71, 0.9)),
+    url('../assets/screenshot-walksinto.png');
+  &:focus,
+  &:hover {
+    background-image: 
+      linear-gradient(rgba(86, 93, 71, 0)),
+      url('../assets/screenshot-walksinto.png');
   }
 }
