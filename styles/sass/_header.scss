@@ -1,11 +1,11 @@
 // HEADER SECTION
 header {
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.75);
   position: fixed;
     top: 0;
   padding: 10px 0;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
   .flex {
     display: flex;
     justify-content: space-between;

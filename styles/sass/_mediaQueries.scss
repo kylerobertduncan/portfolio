@@ -1,0 +1,81 @@
+// responsive display break points
+$hugeScreen: 1800px;
+$tabletLand: 1200px;
+$tabletPort: 900px;
+$phoneLand: 750px; // perhaps not necessary?
+$phonePort: 600px;
+// should be good down to 320px
+
+// tablet landscape or small desktop
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 95%;
+  }
+}
+
+// tablet portait view
+@media (max-width: 900px) {
+  // HEADER
+  header {
+    h1 {
+      font-size: 2.25rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  // GRID SETUP
+  .grid {
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  // ISLAND LOCATIONS
+  .contactIsland {
+    grid-column: 1 / span 3;
+  }
+  .projectsIsland {
+    grid-column: span 3 / -1;
+    grid-row: 2 / span 3;
+  }
+}
+
+// phone portait view
+@media (max-width: 600px) {
+  // HEADER
+  header {
+    position: static; // TBD??
+    .flex {
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+
+  // GRID SETUP
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  // ISLAND LOCATIONS
+  // .aboutIsland {
+  //   grid-column: span 6 / -1;
+  //   grid-row: span 6;
+  // }
+  .contactIsland {
+    grid-column: auto / span 6;
+    grid-row: span 6;
+  }
+  .projectsIsland {
+    grid-column: span 6 / auto;
+    grid-row: auto / span 6;
+  }
+  // .skillsIsland {
+  //   grid-column: 1 / span 6;
+  //   grid-row: span 6;
+  // }
+}
