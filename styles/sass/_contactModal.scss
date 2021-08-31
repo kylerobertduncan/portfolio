@@ -7,20 +7,36 @@
   }
   .contactIcons {
     display: grid;
+    gap: 20px;
     grid-template-columns: repeat(5, 1fr);
     margin-top: 50px;
   }
   a {
     padding: 10px;
+    text-align: center;
     &:focus,
     &:hover {
       text-decoration: 2px $LightWood underline;
     }
+    h3 {
+      font-size: 1.2rem;
+    }
+    img {
+      margin: 0 auto 10px;
+    }
   }
   .flex {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+  }
+}
+
+@media (max-width: $phonePort) {
+  .contact {
+    .contactIcons {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }

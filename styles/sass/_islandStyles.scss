@@ -1,49 +1,48 @@
 // ABOUT
 .aboutIsland {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
+  grid-column: span 6;
+  grid-row: span 6;
+  order: 1;
   position: relative;
 }
 
 .aboutButton {
-  bottom: 35%;
-  left: 14%;
+  bottom: calc(44% - 60px);
+  left: calc(24% - 60px);
   &::after {
     content: "about";
-    left: -75px;
+    left: -70px;
   }
 }
 
 // CONTACT
 .contactIsland {
-  grid-column-start: 2;
-  grid-row-end: -1;
+  grid-column: 2 / span 3;
+  grid-row: span 3;
+  order: 3;
   position: relative;
 }
 
 .contactButton {
-  height: 40%;
-  width: 40%;
-  top: 28%;
-  right: 1%;
+  top: calc(49% - 60px);
+  right: calc(22% - 60px);
   &::after {
     content: "contact";
-    right: -85px;
+    right: -90px;
   }
 }
 
 // PROJECTS
 .projectsIsland {
-  grid-column-end: -2;
-  grid-row-start: 1;
+  grid-column: span 3 / -2;
+  grid-row: span 3;
+  order: 3;
   position: relative;
 }
 
 .projectsButton {
-  height: 40%;
-  width: 40%;
-  top: 28%;
-  right: 21%;
+  top: calc(48% - 60px);
+  right: calc(41% - 60px);
   z-index: 20;
   &::after {
     content: "projects";
@@ -53,14 +52,15 @@
 
 // SKILLS
 .skillsIsland {
-  grid-column: span 2 / -1;
-  grid-row: span 2 / -1;
+  grid-column: span 6;
+  grid-row: span 6;
+  order: 4;
   position: relative;
 }
 
 .skillsButton {
-  right: 23%;
-  top: 34%;
+  right: calc((100% / 3) - 60px);
+  top: calc(45% - 60px);
   &::after {
     content: "skills";
     top: -20px;

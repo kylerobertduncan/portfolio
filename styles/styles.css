@@ -272,22 +272,22 @@ button {
 
 .icon {
   margin-bottom: 10px;
-  max-width: 90px;
+  max-width: 60px;
 }
 
 .wrapper {
   margin: 0 auto;
-  max-width: calc((100vh / 3) * 4);
-  width: 90%;
+  max-width: 1920px;
+  width: 80%;
 }
 
 header {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.75);
   position: fixed;
   top: 0;
   padding: 10px 0;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
 }
 header .flex {
   display: -webkit-box;
@@ -315,19 +315,20 @@ h2 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, calc(100vh / 3));
-  grid-template-rows: repeat(3, calc(100vh / 3));
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-flow: dense;
 }
 
 .linkButton {
   background-color: transparent;
   border: none;
   border-radius: 50%;
-  height: 20%;
-  width: 20%;
+  height: 120px;
+  width: 120px;
   position: absolute;
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
+  z-index: 50;
 }
 .linkButton:focus, .linkButton:hover {
   background-color: rgba(230, 213, 184, 0.25);
@@ -338,52 +339,57 @@ h2 {
   height: 32px;
   padding: 5px;
   position: absolute;
-  bottom: calc(50% - 16px);
+  bottom: 50px;
 }
 
 .aboutIsland {
-  grid-column: 1/span 2;
-  grid-row: 1/span 2;
+  grid-column: span 6;
+  grid-row: span 6;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   position: relative;
 }
 
 .aboutButton {
-  bottom: 35%;
-  left: 14%;
+  bottom: calc(44% - 60px);
+  left: calc(24% - 60px);
 }
 .aboutButton::after {
   content: "about";
-  left: -75px;
+  left: -70px;
 }
 
 .contactIsland {
-  grid-column-start: 2;
-  grid-row-end: -1;
+  grid-column: 2/span 3;
+  grid-row: span 3;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   position: relative;
 }
 
 .contactButton {
-  height: 40%;
-  width: 40%;
-  top: 28%;
-  right: 1%;
+  top: calc(49% - 60px);
+  right: calc(22% - 60px);
 }
 .contactButton::after {
   content: "contact";
-  right: -85px;
+  right: -90px;
 }
 
 .projectsIsland {
-  grid-column-end: -2;
-  grid-row-start: 1;
+  grid-column: span 3/-2;
+  grid-row: span 3;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   position: relative;
 }
 
 .projectsButton {
-  height: 40%;
-  width: 40%;
-  top: 28%;
-  right: 21%;
+  top: calc(48% - 60px);
+  right: calc(41% - 60px);
   z-index: 20;
 }
 .projectsButton::after {
@@ -392,14 +398,17 @@ h2 {
 }
 
 .skillsIsland {
-  grid-column: span 2/-1;
-  grid-row: span 2/-1;
+  grid-column: span 6;
+  grid-row: span 6;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
   position: relative;
 }
 
 .skillsButton {
-  right: 23%;
-  top: 34%;
+  right: calc((100% / 3) - 60px);
+  top: calc(45% - 60px);
 }
 .skillsButton::after {
   content: "skills";
@@ -423,6 +432,7 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  padding: 10%;
   position: fixed;
   top: 0;
   width: 100%;
@@ -433,7 +443,7 @@ h2 {
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px 5px black;
           box-shadow: 5px 5px 5px 5px black;
-  padding: 75px;
+  padding: 50px;
   position: relative;
 }
 .modal > div .closeModal {
@@ -487,6 +497,19 @@ h2 {
           align-items: center;
 }
 
+@media (max-width: 750px) {
+  .modal {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow-y: scroll;
+    padding: 5%;
+    scroll-behavior: smooth;
+  }
+  .modal > div {
+    padding: 20px;
+  }
+}
 .projectsGrid {
   background-image: url("../assets/villages/extra-city-map.png");
   background-position: center;
@@ -498,6 +521,7 @@ h2 {
 }
 
 .projectDiv {
+  max-width: 350px;
   position: relative;
 }
 .projectDiv .screenShot {
@@ -579,45 +603,99 @@ h2 {
   background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/screenshot-walksinto.png");
 }
 
+@media (max-width: 900px) {
+  .projectDiv h3 {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 600px) {
+  .projectsGrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+  .projectsGrid .iconDiv {
+    margin: 20px auto;
+  }
+}
 .aboutFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.aboutFlex > div {
-  width: 50%;
+.aboutFlex .aboutHead {
+  text-align: center;
+  width: 35%;
 }
-.aboutFlex .aboutTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.aboutFlex img {
+.aboutFlex .aboutHead img {
   border-radius: 50%;
-  width: 40%;
+  margin: 20px auto;
+  width: 100%;
 }
-.aboutFlex p {
+.aboutFlex .aboutText {
+  width: 60%;
+}
+.aboutFlex .aboutText p {
   font-size: 1.125rem;
   line-height: 1.8;
-  margin: 2% 0;
+  margin-bottom: 15px;
 }
 
+@media (max-width: 750px) {
+  .aboutFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aboutFlex .aboutHead,
+.aboutFlex .aboutText {
+    width: 100%;
+  }
+  .aboutFlex .aboutText p {
+    font-size: 1rem;
+  }
+}
 .skillIcons {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75))), url("../assets/villages/LG-dungeon.png");
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75)), url("../assets/villages/LG-dungeon.png");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.66))), url("../assets/villages/LG-dungeon.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.66)), url("../assets/villages/LG-dungeon.png");
   background-position: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  row-gap: 50px;
+  gap: 25px;
+}
+.skillIcons h3 {
+  font-size: 1.25rem;
+  text-align: center;
 }
 
+@media (max-width: 900px) {
+  .skillIcons {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .skillIcons h3 {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 600px) {
+  .skillIcons {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .skillIcons h2 {
+    font-size: 2rem;
+  }
+  .skillIcons h3 {
+    font-size: 1rem;
+  }
+}
 .contact {
   text-align: center;
 }
@@ -626,18 +704,26 @@ h2 {
 }
 .contact .contactIcons {
   display: grid;
+  gap: 20px;
   grid-template-columns: repeat(5, 1fr);
   margin-top: 50px;
 }
 .contact a {
   padding: 10px;
+  text-align: center;
 }
 .contact a:focus, .contact a:hover {
   -webkit-text-decoration: 2px #565D47 underline;
           text-decoration: 2px #565D47 underline;
 }
+.contact a h3 {
+  font-size: 1.2rem;
+}
+.contact a img {
+  margin: 0 auto 10px;
+}
 .contact .flex {
-  margin-top: 100px;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -647,4 +733,85 @@ h2 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+@media (max-width: 600px) {
+  .contact .contactIcons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 95%;
+  }
+}
+@media (max-width: 900px) {
+  header h1 {
+    font-size: 2.25rem;
+  }
+  header h2 {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  .contactIsland {
+    grid-column: 1/span 3;
+  }
+
+  .projectsIsland {
+    grid-column: span 3/-1;
+    grid-row: 2/span 3;
+  }
+}
+@media (max-width: 750px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header h2 {
+    font-size: 1.75rem;
+  }
+
+  .aboutButton::after {
+    left: -10px;
+    top: -10px;
+  }
+
+  .contactButton::after {
+    right: 0;
+    top: -20px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    position: static;
+  }
+  header .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .contactIsland {
+    grid-column: auto/span 6;
+    grid-row: span 6;
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+
+  .projectsIsland {
+    grid-column: span 6/auto;
+    grid-row: auto/span 6;
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
 }
