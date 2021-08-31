@@ -15,3 +15,11 @@ $raleway: 'Raleway', sans-serif;
 // wieghts: 200, 300, 400, 700, 900
 $bitter: 'Bitter', serif;
 // wieghts: 200, 300, 400, 500
+
+// responsive display break points
+$hugeScreen: 1800px;
+$tabletLand: 1200px;
+$tabletPort: 900px;
+$phoneLand: 750px; // perhaps not necessary?
+$phonePort: 600px;
+// should be good down to 320px

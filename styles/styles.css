@@ -327,6 +327,7 @@ h2 {
   position: absolute;
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
+  z-index: 50;
 }
 .linkButton:focus, .linkButton:hover {
   background-color: rgba(230, 213, 184, 0.25);
@@ -337,7 +338,7 @@ h2 {
   height: 32px;
   padding: 5px;
   position: absolute;
-  bottom: calc(50% - 16px);
+  bottom: 50px;
 }
 
 .aboutIsland {
@@ -350,12 +351,12 @@ h2 {
 }
 
 .aboutButton {
-  bottom: 35%;
-  left: 14%;
+  bottom: calc(44% - 60px);
+  left: calc(24% - 60px);
 }
 .aboutButton::after {
   content: "about";
-  left: -75px;
+  left: -70px;
 }
 
 .contactIsland {
@@ -368,13 +369,12 @@ h2 {
 }
 
 .contactButton {
-  top: 28%;
-  right: 1%;
+  top: calc(49% - 60px);
+  right: calc(22% - 60px);
 }
 .contactButton::after {
   content: "contact";
-  right: -85px;
-  z-index: 100;
+  right: -90px;
 }
 
 .projectsIsland {
@@ -387,8 +387,8 @@ h2 {
 }
 
 .projectsButton {
-  top: 28%;
-  right: 21%;
+  top: calc(48% - 60px);
+  right: calc(41% - 60px);
   z-index: 20;
 }
 .projectsButton::after {
@@ -406,8 +406,8 @@ h2 {
 }
 
 .skillsButton {
-  right: 23%;
-  top: 34%;
+  right: calc((100% / 3) - 60px);
+  top: calc(45% - 60px);
 }
 .skillsButton::after {
   content: "skills";
@@ -683,6 +683,24 @@ h2 {
     grid-row: 2/span 3;
   }
 }
+@media (max-width: 750px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header h2 {
+    font-size: 1.75rem;
+  }
+
+  .aboutButton::after {
+    left: -10px;
+    top: -10px;
+  }
+
+  .contactButton::after {
+    right: 0;
+    top: -20px;
+  }
+}
 @media (max-width: 600px) {
   header {
     position: static;
@@ -693,12 +711,6 @@ h2 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  header h1 {
-    font-size: 2rem;
-  }
-  header h2 {
-    font-size: 1.75rem;
-  }
 
   .grid {
     grid-template-columns: repeat(6, 1fr);
@@ -707,10 +719,16 @@ h2 {
   .contactIsland {
     grid-column: auto/span 6;
     grid-row: span 6;
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
   }
 
   .projectsIsland {
     grid-column: span 6/auto;
     grid-row: auto/span 6;
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
   }
 }

@@ -47,7 +47,6 @@ button {
   margin: 0 auto;
   // TO FIT MAP TO SCREEN HEIGHT
   // max-width: calc((100vh / 3) * 4);
-  // max-width: 2000px;
   width: 80%;
 }
 
@@ -70,12 +69,11 @@ button {
   background-color: transparent;
   border: none;
   border-radius: 50%;
-  // height: 20%;
-  // width: 20%;
   height: 120px;
   width: 120px;
   position: absolute;
   transition: background-color 0.5s;
+  z-index: 50;
   &:focus,
   &:hover {
     background-color: rgba(230,213,184,0.25);
@@ -86,7 +84,7 @@ button {
     height: 32px;
     padding: 5px;
     position: absolute;
-    bottom: calc(50% - 16px);
+    bottom: 50px;
   }
 }
 

@@ -1,20 +1,14 @@
-// responsive display break points
-$hugeScreen: 1800px;
-$tabletLand: 1200px;
-$tabletPort: 900px;
-$phoneLand: 750px; // perhaps not necessary?
-$phonePort: 600px;
-// should be good down to 320px
+@import 'variables';
 
 // tablet landscape or small desktop
-@media (max-width: 1200px) {
+@media (max-width: $tabletLand) {
   .wrapper {
     width: 95%;
   }
 }
 
 // tablet portait view
-@media (max-width: 900px) {
+@media (max-width: $tabletPort) {
   // HEADER
   header {
     h1 {
@@ -40,19 +34,36 @@ $phonePort: 600px;
   }
 }
 
-// phone portait view
-@media (max-width: 600px) {
-  // HEADER
+// phone landscape view
+@media (max-width: $phoneLand) {
+  // HEADER FONT
   header {
-    position: static; // TBD??
-    .flex {
-      flex-direction: column;
-    }
     h1 {
       font-size: 2rem;
     }
     h2 {
       font-size: 1.75rem;
+    }
+  }
+
+  // BUTTON LOCATIONS
+  .aboutButton::after {
+    left: -10px;
+    top: -10px;
+  }
+  .contactButton::after {
+    right: 0;
+    top: -20px;
+  }
+}
+
+// phone portait view
+@media (max-width: $phonePort) {
+  // HEADER LAYOUT
+  header {
+    position: static; // TBD??
+    .flex {
+      flex-direction: column;
     }
   }
 
@@ -62,20 +73,14 @@ $phonePort: 600px;
   }
 
   // ISLAND LOCATIONS
-  // .aboutIsland {
-  //   grid-column: span 6 / -1;
-  //   grid-row: span 6;
-  // }
   .contactIsland {
     grid-column: auto / span 6;
     grid-row: span 6;
+    order: 6;
   }
   .projectsIsland {
     grid-column: span 6 / auto;
     grid-row: auto / span 6;
+    order: 5;
   }
-  // .skillsIsland {
-  //   grid-column: 1 / span 6;
-  //   grid-row: span 6;
-  // }
 }

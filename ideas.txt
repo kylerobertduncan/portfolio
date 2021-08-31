@@ -30,8 +30,12 @@ Footer
 // TO ADD
 
 x check overlay of header on island buttons w scroll
-- check button:after labels in smaller views (overlap map)
+- check button:after labels in smaller views
+    (overlap map/off the page)
 - smaller map images for about/skills on main in phone view
+  - same maps but overflow hidden off right of page?
+  - (crop images to achieve and save memory?)
+    - would require repositioning of button
 - resize modal content to better fit laptop screen
 - consistent size button 'glow' on main page, centered on point 'city' in map
 
@@ -44,6 +48,8 @@ Add Land Acknowledgement
 Another island: Backstory
 - education
 - experience
+- add easter eggs in map with title property
+- loch ness icon, random position/moves about
 
 Skills icons as tokens on map background
 - ensure relative placement
