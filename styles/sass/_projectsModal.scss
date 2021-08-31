@@ -13,6 +13,7 @@
 }
 
 .projectDiv {
+  max-width: 350px;
   position: relative;
   .screenShot {
     background-position: top;
@@ -100,5 +101,27 @@
     background-image: 
       linear-gradient(rgba(86, 93, 71, 0)),
       url('../assets/screenshot-walksinto.png');
+  }
+}
+
+@media (max-width: $tabletPort) {
+  // .projectsGrid {
+  //   grid-template-columns: repeat(1, 1fr);
+  //   grid-template-rows: auto;
+  // }
+  .projectDiv {
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media (max-width: $phonePort) {
+  .projectsGrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    .iconDiv {
+      margin: 20px auto;
+    }
   }
 }

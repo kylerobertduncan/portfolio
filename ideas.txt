@@ -36,8 +36,9 @@ x check overlay of header on island buttons w scroll
   - same maps but overflow hidden off right of page?
   - (crop images to achieve and save memory?)
     - would require repositioning of button
-- resize modal content to better fit laptop screen
-- consistent size button 'glow' on main page, centered on point 'city' in map
+x resize modal content to better fit laptop screen
+x consistent size button 'glow' on main page, centered on point 'city' in map
+- add images behind 'about' and 'contact' modals
 
 
 Add Land Acknowledgement

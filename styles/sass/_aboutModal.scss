@@ -1,21 +1,37 @@
+@import 'variables';
+
 .aboutFlex {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  & > div {
-    width: 50%;
+  .aboutHead {
+    text-align: center;
+    width: 35%;
+    img {
+      border-radius: 50%;
+      margin: 20px auto;
+      width: 100%;
+    }
   }
-  .aboutTitle {
-    display: flex;
-    
+  .aboutText {
+    width: 60%;
+    p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
   }
-  img {
-    border-radius: 50%;
-    width: 40%;
-  }
-  p {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    margin: 2% 0;
+}
+
+@media (max-width: $phoneLand) {
+  .aboutFlex {
+    flex-direction: column;
+    .aboutHead,
+    .aboutText {
+      width: 100%;
+    }
+    .aboutText p {
+      font-size: 1rem;
+    }
   }
 }

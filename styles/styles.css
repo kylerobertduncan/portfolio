@@ -272,11 +272,12 @@ button {
 
 .icon {
   margin-bottom: 10px;
-  max-width: 90px;
+  max-width: 60px;
 }
 
 .wrapper {
   margin: 0 auto;
+  max-width: 1920px;
   width: 80%;
 }
 
@@ -431,6 +432,7 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  padding: 10%;
   position: fixed;
   top: 0;
   width: 100%;
@@ -441,7 +443,7 @@ h2 {
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px 5px black;
           box-shadow: 5px 5px 5px 5px black;
-  padding: 75px;
+  padding: 50px;
   position: relative;
 }
 .modal > div .closeModal {
@@ -495,6 +497,19 @@ h2 {
           align-items: center;
 }
 
+@media (max-width: 750px) {
+  .modal {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow-y: scroll;
+    padding: 5%;
+    scroll-behavior: smooth;
+  }
+  .modal > div {
+    padding: 20px;
+  }
+}
 .projectsGrid {
   background-image: url("../assets/villages/extra-city-map.png");
   background-position: center;
@@ -506,6 +521,7 @@ h2 {
 }
 
 .projectDiv {
+  max-width: 350px;
   position: relative;
 }
 .projectDiv .screenShot {
@@ -587,45 +603,99 @@ h2 {
   background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/screenshot-walksinto.png");
 }
 
+@media (max-width: 900px) {
+  .projectDiv h3 {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 600px) {
+  .projectsGrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+  .projectsGrid .iconDiv {
+    margin: 20px auto;
+  }
+}
 .aboutFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.aboutFlex > div {
-  width: 50%;
+.aboutFlex .aboutHead {
+  text-align: center;
+  width: 35%;
 }
-.aboutFlex .aboutTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.aboutFlex img {
+.aboutFlex .aboutHead img {
   border-radius: 50%;
-  width: 40%;
+  margin: 20px auto;
+  width: 100%;
 }
-.aboutFlex p {
+.aboutFlex .aboutText {
+  width: 60%;
+}
+.aboutFlex .aboutText p {
   font-size: 1.125rem;
   line-height: 1.8;
-  margin: 2% 0;
+  margin-bottom: 15px;
 }
 
+@media (max-width: 750px) {
+  .aboutFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aboutFlex .aboutHead,
+.aboutFlex .aboutText {
+    width: 100%;
+  }
+  .aboutFlex .aboutText p {
+    font-size: 1rem;
+  }
+}
 .skillIcons {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75))), url("../assets/villages/LG-dungeon.png");
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75)), url("../assets/villages/LG-dungeon.png");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.66))), url("../assets/villages/LG-dungeon.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.66)), url("../assets/villages/LG-dungeon.png");
   background-position: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  row-gap: 50px;
+  gap: 25px;
+}
+.skillIcons h3 {
+  font-size: 1.25rem;
+  text-align: center;
 }
 
+@media (max-width: 900px) {
+  .skillIcons {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .skillIcons h3 {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 600px) {
+  .skillIcons {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .skillIcons h2 {
+    font-size: 2rem;
+  }
+  .skillIcons h3 {
+    font-size: 1rem;
+  }
+}
 .contact {
   text-align: center;
 }
@@ -634,18 +704,26 @@ h2 {
 }
 .contact .contactIcons {
   display: grid;
+  gap: 20px;
   grid-template-columns: repeat(5, 1fr);
   margin-top: 50px;
 }
 .contact a {
   padding: 10px;
+  text-align: center;
 }
 .contact a:focus, .contact a:hover {
   -webkit-text-decoration: 2px #565D47 underline;
           text-decoration: 2px #565D47 underline;
 }
+.contact a h3 {
+  font-size: 1.2rem;
+}
+.contact a img {
+  margin: 0 auto 10px;
+}
 .contact .flex {
-  margin-top: 100px;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -657,6 +735,11 @@ h2 {
           justify-content: space-evenly;
 }
 
+@media (max-width: 600px) {
+  .contact .contactIcons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 1200px) {
   .wrapper {
     width: 95%;

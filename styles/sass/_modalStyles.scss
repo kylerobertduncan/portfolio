@@ -7,6 +7,7 @@
     flex-direction: column;
     justify-content: center;
   height: 100%;
+  padding: 10%;
   position: fixed;
   top: 0;
   width: 100%;
@@ -15,11 +16,8 @@
     background-color: rgba(255,255,255,0.75);
     border-radius: 20px;
     box-shadow: 5px 5px 5px 5px black;
-    padding: 75px;
+    padding: 50px;
     position: relative;
-    // add h/w to individual modals as needed?
-    // height: 80%;
-    // width: 80%;
     .closeModal {
       background-color: transparent;
       border: none;
@@ -52,6 +50,11 @@
   display: none;
 }
 
+// .modalWrapper {
+//   max-width: 80%;
+// }
+// remove class from HTML as well
+
 .iconDiv,
 .projectDiv {
     display: flex;
@@ -59,3 +62,15 @@
     justify-content: center;
     align-items: center;
   }
+
+@media (max-width: $phoneLand) {
+  .modal {
+    justify-content: flex-start;
+    overflow-y: scroll;
+    padding: 5%;
+    scroll-behavior: smooth;
+    & > div {
+      padding: 20px;
+    }
+  }
+}

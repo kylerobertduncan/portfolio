@@ -40,13 +40,12 @@ button {
 
 .icon {
   margin-bottom: 10px;
-  max-width: 90px;
+  max-width: 60px;
 }
 
 .wrapper {
   margin: 0 auto;
-  // TO FIT MAP TO SCREEN HEIGHT
-  // max-width: calc((100vh / 3) * 4);
+  max-width: 1920px;
   width: 80%;
 }
 
@@ -56,12 +55,7 @@ button {
 // MAIN SECTION
 .grid {
   display: grid;
-
   grid-template-columns: repeat(12, 1fr);
-  // grid-template-rows: minmax(300px, 1fr);
-  // TO FIT MAP TO SCREEN HEIGHT
-  // grid-template-columns: repeat(4, calc(100vh / 3));
-  // grid-template-rows: repeat(3, calc(100vh / 3));
   grid-auto-flow: dense;
 }
 
