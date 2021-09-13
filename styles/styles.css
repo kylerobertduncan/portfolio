@@ -705,7 +705,7 @@ h2 {
 .contact .contactIcons {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 50px;
 }
 .contact a {
@@ -734,6 +734,9 @@ h2 {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+.contact .flex a {
+  font-size: 1.1rem;
+}
 
 @media (max-width: 600px) {
   .contact .contactIcons {
@@ -743,6 +746,10 @@ h2 {
 @media (max-width: 1200px) {
   .wrapper {
     width: 95%;
+  }
+
+  .modal {
+    padding: 10% 2.5% 5%;
   }
 }
 @media (max-width: 900px) {

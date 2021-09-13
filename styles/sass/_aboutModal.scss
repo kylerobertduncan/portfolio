@@ -23,6 +23,33 @@
   }
 }
 
+// @media (max-width: $tabletLand) {
+//   .aboutFlex {
+//     flex-direction: column;
+//     .aboutHead,
+//     .aboutText {
+//       width: 100%;
+//     }
+//     .aboutText p {
+//       font-size: 1rem;
+//     }
+//   }
+// }
+
+
+// @media (max-width: $tabletPort) {
+//   .aboutFlex {
+//     flex-direction: column;
+//     .aboutHead,
+//     .aboutText {
+//       width: 100%;
+//     }
+//     .aboutText p {
+//       font-size: 1rem;
+//     }
+//   }
+// }
+
 @media (max-width: $phoneLand) {
   .aboutFlex {
     flex-direction: column;
