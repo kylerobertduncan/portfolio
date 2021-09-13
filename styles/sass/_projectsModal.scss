@@ -22,7 +22,7 @@
     border: 5px solid $Danger;
     border-radius: 10px;
     padding: 20px;
-    min-height: 230px;
+    height: 240px;
     width: 90%;
     // transition: all 0.5s;
     // transition: border 0.2s;
@@ -104,11 +104,11 @@
   }
 }
 
-@media (max-width: $tabletPort) {
+@media (max-width: $tabletLand) {
   .projects {
     justify-content: flex-start;
     overflow-y: scroll;
-    padding: 10% 2.5%;
+    padding: 10% 5%;
     scroll-behavior: smooth;
   }
   // .projectsGrid {
@@ -118,6 +118,9 @@
   .projectDiv {
     h3 {
       font-size: 1.25rem;
+    }
+    .screenShot p {
+      font-size: 1.05rem;
     }
   }
 }

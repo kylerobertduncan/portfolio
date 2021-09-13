@@ -531,7 +531,7 @@ h2 {
   border: 5px solid #E6D5B8;
   border-radius: 10px;
   padding: 20px;
-  min-height: 230px;
+  height: 240px;
   width: 90%;
 }
 .projectDiv .screenShot p {
@@ -603,18 +603,21 @@ h2 {
   background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/screenshot-walksinto.png");
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .projects {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     overflow-y: scroll;
-    padding: 10% 2.5%;
+    padding: 10% 5%;
     scroll-behavior: smooth;
   }
 
   .projectDiv h3 {
     font-size: 1.25rem;
+  }
+  .projectDiv .screenShot p {
+    font-size: 1.05rem;
   }
 }
 @media (max-width: 600px) {
