@@ -604,6 +604,15 @@ h2 {
 }
 
 @media (max-width: 900px) {
+  .projects {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow-y: scroll;
+    padding: 10% 2.5%;
+    scroll-behavior: smooth;
+  }
+
   .projectDiv h3 {
     font-size: 1.25rem;
   }
@@ -646,6 +655,16 @@ h2 {
   margin-bottom: 15px;
 }
 
+@media (max-width: 1200px) {
+  .about {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow-y: scroll;
+    padding: 5% 2.5% 2.5%;
+    scroll-behavior: smooth;
+  }
+}
 @media (max-width: 750px) {
   .aboutFlex {
     -webkit-box-orient: vertical;
@@ -746,10 +765,6 @@ h2 {
 @media (max-width: 1200px) {
   .wrapper {
     width: 95%;
-  }
-
-  .modal {
-    padding: 10% 2.5% 5%;
   }
 }
 @media (max-width: 900px) {

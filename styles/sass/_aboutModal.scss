@@ -23,32 +23,14 @@
   }
 }
 
-// @media (max-width: $tabletLand) {
-//   .aboutFlex {
-//     flex-direction: column;
-//     .aboutHead,
-//     .aboutText {
-//       width: 100%;
-//     }
-//     .aboutText p {
-//       font-size: 1rem;
-//     }
-//   }
-// }
-
-
-// @media (max-width: $tabletPort) {
-//   .aboutFlex {
-//     flex-direction: column;
-//     .aboutHead,
-//     .aboutText {
-//       width: 100%;
-//     }
-//     .aboutText p {
-//       font-size: 1rem;
-//     }
-//   }
-// }
+@media (max-width: $tabletLand) {
+  .about {
+    justify-content: flex-start;
+    overflow-y: scroll;
+    padding: 5% 2.5% 2.5%;
+    scroll-behavior: smooth;
+  }
+}
 
 @media (max-width: $phoneLand) {
   .aboutFlex {
