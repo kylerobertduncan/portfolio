@@ -19,6 +19,10 @@
       font-size: 1.125rem;
       line-height: 1.8;
       margin-bottom: 15px;
+      a:focus,
+      a:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

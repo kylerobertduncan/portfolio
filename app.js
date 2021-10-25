@@ -70,6 +70,7 @@ app.closeModal = (modal) => {
 
 app.init = () => {
   // console.log('app is running');
+  app.openModal('landAck')
   app.openButtons();
 }
 app.init();

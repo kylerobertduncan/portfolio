@@ -657,6 +657,10 @@ h2 {
   line-height: 1.8;
   margin-bottom: 15px;
 }
+.aboutFlex .aboutText p a:focus,
+.aboutFlex .aboutText p a:hover {
+  text-decoration: underline;
+}
 
 @media (max-width: 1200px) {
   .about {
