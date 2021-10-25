@@ -450,7 +450,7 @@ h2 {
   background-color: transparent;
   border: none;
   border-radius: 50%;
-  padding: 8px 12px 12px 8px;
+  padding: 8px 0px 12px 8px;
   position: absolute;
   top: -25px;
   right: -25px;
@@ -508,6 +508,129 @@ h2 {
   }
   .modal > div {
     padding: 20px;
+  }
+  .modal > div .closeModal {
+    top: -20px;
+    right: -15px;
+  }
+}
+.landAckFlex {
+  padding: 50px;
+}
+.landAckFlex .mihi {
+  margin-top: 20px;
+}
+
+@media (max-width: 750px) {
+  .landAckFlex {
+    padding: 30px;
+  }
+  .landAckFlex p {
+    font-size: 1rem;
+  }
+}
+.aboutFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.aboutFlex .aboutHead {
+  text-align: center;
+  width: 35%;
+}
+.aboutFlex .aboutHead img {
+  border-radius: 50%;
+  margin: 20px auto;
+  width: 100%;
+}
+.aboutFlex .aboutText {
+  width: 60%;
+}
+.aboutFlex .aboutText p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+.aboutFlex .aboutText p a:focus,
+.aboutFlex .aboutText p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .about {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+}
+@media (max-width: 750px) {
+  .aboutFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aboutFlex .aboutHead,
+.aboutFlex .aboutText {
+    width: 100%;
+  }
+  .aboutFlex .aboutText p {
+    font-size: 1rem;
+  }
+}
+.contact {
+  text-align: center;
+}
+.contact h2 {
+  margin-bottom: 20px;
+}
+.contact .contactIcons {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 50px;
+}
+.contact a {
+  padding: 10px;
+  text-align: center;
+}
+.contact a:focus, .contact a:hover {
+  -webkit-text-decoration: 2px #565D47 underline;
+          text-decoration: 2px #565D47 underline;
+}
+.contact a h3 {
+  font-size: 1.2rem;
+}
+.contact a img {
+  margin: 0 auto 10px;
+}
+.contact .flex {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.contact .flex a {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .contact .contactIcons {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .projectsGrid {
@@ -629,64 +752,6 @@ h2 {
     margin: 20px auto;
   }
 }
-.aboutFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.aboutFlex .aboutHead {
-  text-align: center;
-  width: 35%;
-}
-.aboutFlex .aboutHead img {
-  border-radius: 50%;
-  margin: 20px auto;
-  width: 100%;
-}
-.aboutFlex .aboutText {
-  width: 60%;
-}
-.aboutFlex .aboutText p {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  margin-bottom: 15px;
-}
-.aboutFlex .aboutText p a:focus,
-.aboutFlex .aboutText p a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 1200px) {
-  .about {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    overflow-y: scroll;
-    padding: 5% 2.5% 2.5%;
-    scroll-behavior: smooth;
-  }
-}
-@media (max-width: 750px) {
-  .aboutFlex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .aboutFlex .aboutHead,
-.aboutFlex .aboutText {
-    width: 100%;
-  }
-  .aboutFlex .aboutText p {
-    font-size: 1rem;
-  }
-}
 .skillIcons {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.66))), url("../assets/villages/LG-dungeon.png");
   background-image: linear-gradient(rgba(255, 255, 255, 0.66)), url("../assets/villages/LG-dungeon.png");
@@ -720,53 +785,6 @@ h2 {
   }
   .skillIcons h3 {
     font-size: 1rem;
-  }
-}
-.contact {
-  text-align: center;
-}
-.contact h2 {
-  margin-bottom: 20px;
-}
-.contact .contactIcons {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 50px;
-}
-.contact a {
-  padding: 10px;
-  text-align: center;
-}
-.contact a:focus, .contact a:hover {
-  -webkit-text-decoration: 2px #565D47 underline;
-          text-decoration: 2px #565D47 underline;
-}
-.contact a h3 {
-  font-size: 1.2rem;
-}
-.contact a img {
-  margin: 0 auto 10px;
-}
-.contact .flex {
-  margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-.contact .flex a {
-  font-size: 1.1rem;
-}
-
-@media (max-width: 600px) {
-  .contact .contactIcons {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 1200px) {

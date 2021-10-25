@@ -86,10 +86,11 @@ button {
 
 // MODAL STYLES
 @import 'modalStyles'; // GENERAL STYLES
-@import 'projectsModal'; // PROJECTS MODAL
+@import 'lackAckModal'; // LAND ACKNOWLEDGMENT MODAL
 @import 'aboutModal'; // ABOUT MODAL
-@import 'skillsModal'; // SKILLS MODAL
 @import 'contactModal'; // CONTACT MODAL
+@import 'projectsModal'; // PROJECTS MODAL
+@import 'skillsModal'; // SKILLS MODAL
 
 // RESPONSIVE DESIGN
 @import 'mediaQueries';
