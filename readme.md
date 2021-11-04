@@ -42,7 +42,7 @@ x consistent size button 'glow' on main page, centered on point 'city' in map
 
 
 ## Add Land Acknowledgement
-- pop up on page load
+x pop up on page load
 
 "The land I am standing on today is the traditional territory of many nations including the Mississaugas of the Credit, the Anishnabeg, the Chippewa, the Haudenosaunee and the Wendat peoples and is now home to many diverse First Nations, Inuit and Métis peoples. I also acknowledge that Toronto is covered by Treaty 13 signed with the Mississaugas of the Credit, and the Williams Treaty signed with multiple Mississaugas and Chippewa bands."
 
