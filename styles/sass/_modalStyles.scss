@@ -22,14 +22,14 @@
       background-color: transparent;
       border: none;
       border-radius: 50%;
-      padding: 8px 0px 12px 8px;      
+      padding: 7px 9px 9px 7px;
       position: absolute;
       top: -25px;
       right: -25px;
       transition: background-color 0.5s;
       img {
         border-radius: 50%;
-        box-shadow: 4px 4px $DarkWood;
+        box-shadow: 3px 3px $DarkWood;
         height: 50px;
         width: 50px;
         transition: all 0.1s;
@@ -39,7 +39,7 @@
         background-color: rgba(255,255,255,0.25);
       }
       &:active img {
-        box-shadow: 2px 2px $DarkWood;
+        box-shadow: 1px 1px $DarkWood;
         transform: translate(2px, 2px)
       }
     }
