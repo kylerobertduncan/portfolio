@@ -10,6 +10,7 @@ body {
 }
 
 h1, h2, button {
+  color: black;
   font-family: $raleway;
   margin: 0;
 }
@@ -73,6 +74,7 @@ button {
     background-color: rgba(230,213,184,0.25);
   }
   &::after {
+    color: black;
     font-size: 2rem;
     font-weight: 700;
     height: 32px;
@@ -80,6 +82,10 @@ button {
     position: absolute;
     bottom: 50px;
   }
+}
+
+.disabledButton {
+  display: none;
 }
 
 @import 'islandStyles';

@@ -242,6 +242,7 @@ body {
 }
 
 h1, h2, button {
+  color: black;
   font-family: "Raleway", sans-serif;
   margin: 0;
 }
@@ -282,7 +283,7 @@ button {
 }
 
 header {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
   position: fixed;
   top: 0;
   padding: 10px 0;
@@ -334,12 +335,17 @@ h2 {
   background-color: rgba(230, 213, 184, 0.25);
 }
 .linkButton::after {
+  color: black;
   font-size: 2rem;
   font-weight: 700;
   height: 32px;
   padding: 5px;
   position: absolute;
   bottom: 50px;
+}
+
+.disabledButton {
+  display: none;
 }
 
 .aboutIsland {
@@ -439,7 +445,7 @@ h2 {
   z-index: 100;
 }
 .modal > div {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.85);
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px 5px black;
           box-shadow: 5px 5px 5px 5px black;
@@ -634,6 +640,7 @@ h2 {
   }
 }
 .projectsGrid {
+  background-color: transparent;
   background-image: url("../assets/villages/extra-city-map.png");
   background-position: center;
   background-size: cover;
@@ -753,6 +760,7 @@ h2 {
   }
 }
 .skillIcons {
+  background-color: transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.66))), url("../assets/villages/LG-dungeon.png");
   background-image: linear-gradient(rgba(255, 255, 255, 0.66)), url("../assets/villages/LG-dungeon.png");
   background-position: center;

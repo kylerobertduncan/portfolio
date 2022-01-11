@@ -13,13 +13,19 @@ app.openButtons = () => {
 
 // on button click
 app.openModal = (modal) => {
+  // hide main modal buttons
+  const mainButtons = document.querySelectorAll('.linkButton')
+  mainButtons.forEach( (button) => {
+    button.classList.add('disabledButton');
+  })
+
   // show the related modal, by value
   const thisModal = document.querySelector(`.${modal}`)
   thisModal.classList.remove('hidden');
+
   // accessibility switch
   thisModal.setAttribute('aria-hidden', 'false');
   document.querySelector('main').setAttribute('aria-hidden', 'true');
-  
 
   // add an eventListener to close button
   // create a deferred function too allow argument
@@ -28,7 +34,7 @@ app.openModal = (modal) => {
   closeButton.addEventListener('click', app.handleCloseButton);
   // bring focus to close button for accessibility
     // -- does this cause screen readers to skip text?
-  thisModal.focus(); 
+  closeButton.focus(); 
 
   // add an eventListener to the greyed main area
   app.handleClickAway = (e) => {
@@ -64,14 +70,20 @@ app.closeModal = (modal) => {
   // accessibility switch
   thisModal.setAttribute('aria-hidden', 'true');
   document.querySelector('main').setAttribute('aria-hidden', 'false');
+
+  // show main modal buttons
+  const mainButtons = document.querySelectorAll('.linkButton')
+  mainButtons.forEach((button) => {
+    button.classList.remove('disabledButton');
+  })
 } 
 
 // initialize the app
 
 app.init = () => {
   // console.log('app is running');
-  app.openModal('landAck')
   app.openButtons();
+  app.openModal('landAck')
 }
 app.init();
 
