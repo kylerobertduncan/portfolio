@@ -8,9 +8,19 @@
   background-position: center;
   background-size: cover;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
+  .projectsHeading {
+    a {
+      text-decoration: underline;
+    }
+  }
+  p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
 }
 
 .projectDiv {
@@ -27,11 +37,6 @@
     width: 90%;
     // transition: all 0.5s;
     // transition: border 0.2s;
-    p {
-      font-size: 1.1rem;
-      font-weight: 300;
-      margin-bottom: 10px;
-    }
     &:focus,
     &:hover {
       border: 5px solid $LightWood;
@@ -69,41 +74,67 @@
   }
 }
 
-.fridgePoetry {
+.autoThefts {
   background-image: 
     linear-gradient(rgba(86, 93, 71, 0.9)),
-    url('../assets/screenshot-fridgepoetry.png');
+    url('../assets/autoThefts.png');
   &:focus,
   &:hover {
     background-image: 
       linear-gradient(rgba(86, 93, 71, 0)),
-      url('../assets/screenshot-fridgepoetry.png');
+      url('../assets/autoThefts.png');
   }
 }
 
-.folkAndTales {
+.municipalityQuiz {
   background-image: 
-    linear-gradient(rgba(86, 93, 71, 0.9)),
-    url('../assets/screenshot-folkandtales.png');
+  linear-gradient(rgba(86, 93, 71, 0.9)),
+  url('../assets/municipalityQuiz.png');
   &:focus,
   &:hover {
-    background-image: 
-      linear-gradient(rgba(86, 93, 71, 0)),
-      url('../assets/screenshot-folkandtales.png');
+  background-image: 
+    linear-gradient(rgba(86, 93, 71, 0)),
+    url('../assets/municipalityQuiz.png');
   }
 }
 
-.walksIntoAtavern {
+
+.subwayExtension{
   background-image: 
-    linear-gradient(rgba(86, 93, 71, 0.9)),
-    url('../assets/screenshot-walksinto.png');
+  linear-gradient(rgba(86, 93, 71, 0.9)),
+  url('../assets/subwayExtension.png');
   &:focus,
   &:hover {
-    background-image: 
-      linear-gradient(rgba(86, 93, 71, 0)),
-      url('../assets/screenshot-walksinto.png');
+  background-image: 
+    linear-gradient(rgba(86, 93, 71, 0)),
+    url('../assets/subwayExtension.png');
   }
 }
+
+.freeMovies {
+  background-image: 
+  linear-gradient(rgba(86, 93, 71, 0.9)),
+  url('../assets/freeMovies.png');
+  &:focus,
+  &:hover {
+  background-image: 
+    linear-gradient(rgba(86, 93, 71, 0)),
+    url('../assets/freeMovies.png');
+  }
+}
+
+.raptors {
+  background-image: 
+  linear-gradient(rgba(86, 93, 71, 0.9)),
+  url('../assets/raptors.png');
+  &:focus,
+  &:hover {
+  background-image: 
+    linear-gradient(rgba(86, 93, 71, 0)),
+    url('../assets/raptors.png');
+  }
+}
+
 
 @media (max-width: $tabletLand) {
   .projects {
@@ -112,10 +143,10 @@
     padding: 10% 5%;
     scroll-behavior: smooth;
   }
-  // .projectsGrid {
-  //   grid-template-columns: repeat(1, 1fr);
-  //   grid-template-rows: auto;
-  // }
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
   .projectDiv {
     h3 {
       font-size: 1.25rem;

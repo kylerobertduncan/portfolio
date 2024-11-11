@@ -510,6 +510,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 1rem;
 }
 .iconHeading .icon, .iconHeading h2 {
   width: -webkit-fit-content;
@@ -662,9 +663,17 @@ h2 {
   background-position: center;
   background-size: cover;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
+}
+.projectsGrid .projectsHeading a {
+  text-decoration: underline;
+}
+.projectsGrid p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 10px;
 }
 
 .projectDiv {
@@ -680,11 +689,6 @@ h2 {
   padding: 20px;
   height: 240px;
   width: 90%;
-}
-.projectDiv .screenShot p {
-  font-size: 1.1rem;
-  font-weight: 300;
-  margin-bottom: 10px;
 }
 .projectDiv .screenShot:focus, .projectDiv .screenShot:hover {
   border: 5px solid #565D47;
@@ -723,31 +727,49 @@ h2 {
   width: 100%;
 }
 
-.fridgePoetry {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/screenshot-fridgepoetry.png");
-  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/screenshot-fridgepoetry.png");
+.autoThefts {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/autoThefts.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/autoThefts.png");
 }
-.fridgePoetry:focus, .fridgePoetry:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/screenshot-fridgepoetry.png");
-  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/screenshot-fridgepoetry.png");
-}
-
-.folkAndTales {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/screenshot-folkandtales.png");
-  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/screenshot-folkandtales.png");
-}
-.folkAndTales:focus, .folkAndTales:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/screenshot-folkandtales.png");
-  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/screenshot-folkandtales.png");
+.autoThefts:focus, .autoThefts:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/autoThefts.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/autoThefts.png");
 }
 
-.walksIntoAtavern {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/screenshot-walksinto.png");
-  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/screenshot-walksinto.png");
+.municipalityQuiz {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/municipalityQuiz.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/municipalityQuiz.png");
 }
-.walksIntoAtavern:focus, .walksIntoAtavern:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/screenshot-walksinto.png");
-  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/screenshot-walksinto.png");
+.municipalityQuiz:focus, .municipalityQuiz:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/municipalityQuiz.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/municipalityQuiz.png");
+}
+
+.subwayExtension {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/subwayExtension.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/subwayExtension.png");
+}
+.subwayExtension:focus, .subwayExtension:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/subwayExtension.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/subwayExtension.png");
+}
+
+.freeMovies {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/freeMovies.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/freeMovies.png");
+}
+.freeMovies:focus, .freeMovies:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/freeMovies.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/freeMovies.png");
+}
+
+.raptors {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/raptors.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/raptors.png");
+}
+.raptors:focus, .raptors:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/raptors.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/raptors.png");
 }
 
 @media (max-width: 1200px) {
@@ -758,6 +780,10 @@ h2 {
     overflow-y: scroll;
     padding: 10% 5%;
     scroll-behavior: smooth;
+  }
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
   }
   .projectDiv h3 {
     font-size: 1.25rem;
@@ -788,7 +814,6 @@ h2 {
 }
 .skillsSection .skillsContainer {
   display: grid;
-  padding-top: 1rem;
   row-gap: 1.5rem;
 }
 .skillsSection .skillCategory {
