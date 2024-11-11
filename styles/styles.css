@@ -413,7 +413,7 @@ h2 {
 }
 
 .skillsButton {
-  right: calc((100% / 3) - 60px);
+  right: calc(33.3333333333% - 60px);
   top: calc(45% - 60px);
 }
 .skillsButton::after {
@@ -503,6 +503,23 @@ h2 {
           align-items: center;
 }
 
+.iconHeading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.iconHeading .icon, .iconHeading h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.iconHeading h2 {
+  margin: 0 0.5rem;
+}
+
 @media (max-width: 750px) {
   .modal {
     -webkit-box-pack: start;
@@ -585,7 +602,7 @@ h2 {
             flex-direction: column;
   }
   .aboutFlex .aboutHead,
-.aboutFlex .aboutText {
+  .aboutFlex .aboutText {
     width: 100%;
   }
   .aboutFlex .aboutText p {
@@ -742,7 +759,6 @@ h2 {
     padding: 10% 5%;
     scroll-behavior: smooth;
   }
-
   .projectDiv h3 {
     font-size: 1.25rem;
   }
@@ -759,42 +775,34 @@ h2 {
     margin: 20px auto;
   }
 }
-.skillIcons {
+.skillsSection {
   background-color: transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.66))), url("../assets/villages/LG-dungeon.png");
-  background-image: linear-gradient(rgba(255, 255, 255, 0.66)), url("../assets/villages/LG-dungeon.png");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9))), url("../assets/villages/LG-dungeon.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9)), url("../assets/villages/LG-dungeon.png");
   background-position: center;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 25px;
 }
-.skillIcons h3 {
-  font-size: 1.25rem;
-  text-align: center;
+.skillsSection .skillsHeading {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.skillsSection .skillsContainer {
+  display: grid;
+  padding-top: 1rem;
+  row-gap: 1.5rem;
+}
+.skillsSection .skillCategory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.skillsSection .skillCategory .icon {
+  margin-right: 2rem;
 }
 
-@media (max-width: 900px) {
-  .skillIcons {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-  }
-  .skillIcons h3 {
-    font-size: 1.1rem;
-  }
-}
-@media (max-width: 600px) {
-  .skillIcons {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-  }
-  .skillIcons h2 {
-    font-size: 2rem;
-  }
-  .skillIcons h3 {
-    font-size: 1rem;
-  }
-}
 @media (max-width: 1200px) {
   .wrapper {
     width: 95%;
@@ -807,15 +815,12 @@ h2 {
   header h2 {
     font-size: 2rem;
   }
-
   .grid {
     grid-template-columns: repeat(9, 1fr);
   }
-
   .contactIsland {
     grid-column: 1/span 3;
   }
-
   .projectsIsland {
     grid-column: span 3/-1;
     grid-row: 2/span 3;
@@ -828,12 +833,10 @@ h2 {
   header h2 {
     font-size: 1.75rem;
   }
-
   .aboutButton::after {
     left: -10px;
     top: -10px;
   }
-
   .contactButton::after {
     right: 0;
     top: -20px;
@@ -852,11 +855,9 @@ h2 {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-
   .grid {
     grid-template-columns: repeat(6, 1fr);
   }
-
   .contactIsland {
     grid-column: auto/span 6;
     grid-row: span 6;
@@ -864,7 +865,6 @@ h2 {
         -ms-flex-order: 6;
             order: 6;
   }
-
   .projectsIsland {
     grid-column: span 6/auto;
     grid-row: auto/span 6;

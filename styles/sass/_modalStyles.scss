@@ -63,6 +63,17 @@
     align-items: center;
   }
 
+  .iconHeading {
+    display: flex;
+    align-items: center;
+    .icon, h2 {
+      width: fit-content;
+    }
+    h2 {
+      margin: 0 0.5rem;
+    }
+  }
+
 @media (max-width: $phoneLand) {
   .modal {
     justify-content: flex-start;
