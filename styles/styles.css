@@ -413,7 +413,7 @@ h2 {
 }
 
 .skillsButton {
-  right: calc((100% / 3) - 60px);
+  right: calc(33.3333333333% - 60px);
   top: calc(45% - 60px);
 }
 .skillsButton::after {
@@ -503,6 +503,24 @@ h2 {
           align-items: center;
 }
 
+.iconHeading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+.iconHeading .icon, .iconHeading h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.iconHeading h2 {
+  margin: 0 0.5rem;
+}
+
 @media (max-width: 750px) {
   .modal {
     -webkit-box-pack: start;
@@ -585,7 +603,7 @@ h2 {
             flex-direction: column;
   }
   .aboutFlex .aboutHead,
-.aboutFlex .aboutText {
+  .aboutFlex .aboutText {
     width: 100%;
   }
   .aboutFlex .aboutText p {
@@ -645,9 +663,17 @@ h2 {
   background-position: center;
   background-size: cover;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
+}
+.projectsGrid .projectsHeading a {
+  text-decoration: underline;
+}
+.projectsGrid p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 10px;
 }
 
 .projectDiv {
@@ -663,11 +689,6 @@ h2 {
   padding: 20px;
   height: 240px;
   width: 90%;
-}
-.projectDiv .screenShot p {
-  font-size: 1.1rem;
-  font-weight: 300;
-  margin-bottom: 10px;
 }
 .projectDiv .screenShot:focus, .projectDiv .screenShot:hover {
   border: 5px solid #565D47;
@@ -706,31 +727,49 @@ h2 {
   width: 100%;
 }
 
-.fridgePoetry {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/screenshot-fridgepoetry.png");
-  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/screenshot-fridgepoetry.png");
+.autoThefts {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/autoThefts.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/autoThefts.png");
 }
-.fridgePoetry:focus, .fridgePoetry:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/screenshot-fridgepoetry.png");
-  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/screenshot-fridgepoetry.png");
-}
-
-.folkAndTales {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/screenshot-folkandtales.png");
-  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/screenshot-folkandtales.png");
-}
-.folkAndTales:focus, .folkAndTales:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/screenshot-folkandtales.png");
-  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/screenshot-folkandtales.png");
+.autoThefts:focus, .autoThefts:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/autoThefts.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/autoThefts.png");
 }
 
-.walksIntoAtavern {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/screenshot-walksinto.png");
-  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/screenshot-walksinto.png");
+.municipalityQuiz {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/municipalityQuiz.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/municipalityQuiz.png");
 }
-.walksIntoAtavern:focus, .walksIntoAtavern:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/screenshot-walksinto.png");
-  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/screenshot-walksinto.png");
+.municipalityQuiz:focus, .municipalityQuiz:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/municipalityQuiz.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/municipalityQuiz.png");
+}
+
+.subwayExtension {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/subwayExtension.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/subwayExtension.png");
+}
+.subwayExtension:focus, .subwayExtension:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/subwayExtension.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/subwayExtension.png");
+}
+
+.freeMovies {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/freeMovies.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/freeMovies.png");
+}
+.freeMovies:focus, .freeMovies:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/freeMovies.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/freeMovies.png");
+}
+
+.raptors {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0.9))), url("../assets/raptors.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0.9)), url("../assets/raptors.png");
+}
+.raptors:focus, .raptors:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 93, 71, 0))), url("../assets/raptors.png");
+  background-image: linear-gradient(rgba(86, 93, 71, 0)), url("../assets/raptors.png");
 }
 
 @media (max-width: 1200px) {
@@ -742,7 +781,10 @@ h2 {
     padding: 10% 5%;
     scroll-behavior: smooth;
   }
-
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
   .projectDiv h3 {
     font-size: 1.25rem;
   }
@@ -759,42 +801,33 @@ h2 {
     margin: 20px auto;
   }
 }
-.skillIcons {
+.skillsSection {
   background-color: transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.66))), url("../assets/villages/LG-dungeon.png");
-  background-image: linear-gradient(rgba(255, 255, 255, 0.66)), url("../assets/villages/LG-dungeon.png");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9))), url("../assets/villages/LG-dungeon.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9)), url("../assets/villages/LG-dungeon.png");
   background-position: center;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 25px;
 }
-.skillIcons h3 {
-  font-size: 1.25rem;
-  text-align: center;
+.skillsSection .skillsHeading {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.skillsSection .skillsContainer {
+  display: grid;
+  row-gap: 1.5rem;
+}
+.skillsSection .skillCategory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.skillsSection .skillCategory .icon {
+  margin-right: 2rem;
 }
 
-@media (max-width: 900px) {
-  .skillIcons {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-  }
-  .skillIcons h3 {
-    font-size: 1.1rem;
-  }
-}
-@media (max-width: 600px) {
-  .skillIcons {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-  }
-  .skillIcons h2 {
-    font-size: 2rem;
-  }
-  .skillIcons h3 {
-    font-size: 1rem;
-  }
-}
 @media (max-width: 1200px) {
   .wrapper {
     width: 95%;
@@ -807,15 +840,12 @@ h2 {
   header h2 {
     font-size: 2rem;
   }
-
   .grid {
     grid-template-columns: repeat(9, 1fr);
   }
-
   .contactIsland {
     grid-column: 1/span 3;
   }
-
   .projectsIsland {
     grid-column: span 3/-1;
     grid-row: 2/span 3;
@@ -828,12 +858,10 @@ h2 {
   header h2 {
     font-size: 1.75rem;
   }
-
   .aboutButton::after {
     left: -10px;
     top: -10px;
   }
-
   .contactButton::after {
     right: 0;
     top: -20px;
@@ -852,11 +880,9 @@ h2 {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-
   .grid {
     grid-template-columns: repeat(6, 1fr);
   }
-
   .contactIsland {
     grid-column: auto/span 6;
     grid-row: span 6;
@@ -864,7 +890,6 @@ h2 {
         -ms-flex-order: 6;
             order: 6;
   }
-
   .projectsIsland {
     grid-column: span 6/auto;
     grid-row: auto/span 6;
