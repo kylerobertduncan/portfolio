@@ -44,7 +44,7 @@ x consistent size button 'glow' on main page, centered on point 'city' in map
 ## Add Land Acknowledgement
 x pop up on page load
 
-"The land I am standing on today is the traditional territory of many nations including the Mississaugas of the Credit, the Anishnabeg, the Chippewa, the Haudenosaunee and the Wendat peoples and is now home to many diverse First Nations, Inuit and Métis peoples. I also acknowledge that Toronto is covered by Treaty 13 signed with the Mississaugas of the Credit, and the Williams Treaty signed with multiple Mississaugas and Chippewa bands."
+"I acknowledge that the land on which I live and work is the traditional territory of the Erie, Neutral, Huron-Wendat, Haudenosaunee and Mississaugas. This land is covered by the Dish With One Spoon Wampum Belt Covenant, which was an agreement between the Haudenosaunee and Anishinaabek to share and care for the resources around the Great Lakes. I further acknowledge that this land is covered by the Between the Lakes Purchase, 1792, between the Crown and the Mississaugas of the Credit First Nation."
 
 ## Another island: Backstory
 - education
