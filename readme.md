@@ -44,7 +44,7 @@ x consistent size button 'glow' on main page, centered on point 'city' in map
 ## Add Land Acknowledgement
 x pop up on page load
 
-"I acknowledge that the land on which I live and work is the traditional territory of the Erie, Neutral, Huron-Wendat, Haudenosaunee and Mississaugas. This land is covered by the Dish With One Spoon Wampum Belt Covenant, which was an agreement between the Haudenosaunee and Anishinaabek to share and care for the resources around the Great Lakes. I further acknowledge that this land is covered by the Between the Lakes Purchase, 1792, between the Crown and the Mississaugas of the Credit First Nation."
+"I acknowledge that the land on which I live and work is the traditional territory of the Erie, Neutral, Huron-Wendat, Haudenosaunee and Mississaugas. This land is covered by the Dish With One Spoon Wampum Belt Covenant, which was an agreement between the Haudenosaunee and Anishinaabek to share and care for the resources around the Great Lakes. I further acknowledge that this land is covered by the Between the Lakes Purchase, 1792, between the Crown and the Mississaugas of the Credit First Nation. "
 
 ## Another island: Backstory
 - education
