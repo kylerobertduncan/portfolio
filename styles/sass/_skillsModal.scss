@@ -1,41 +1,23 @@
 @import 'variables';
 
-.skillIcons {
+.skillsSection {
   background-color: transparent;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.66)),
+    linear-gradient(rgba(255, 255, 255, 0.9)),
     url('../assets/villages/LG-dungeon.png');
   background-position: center;
-  // background-size: cover;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 25px;
-  h3 {
-    font-size: 1.25rem;
-    text-align: center;
+  .skillsHeading {
+    justify-content: end;
   }
-}
-
-@media (max-width: $tabletPort) {
-  .skillIcons {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    h3 {
-      font-size: 1.1rem;
-    }
+  .skillsContainer{
+    display: grid;
+    row-gap: 1.5rem;
   }
-}
-
-@media (max-width: $phonePort) {
-  .skillIcons {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    h2 {
-      font-size: 2rem;
-    }
-    h3 {
-      font-size: 1rem;
+  .skillCategory {
+    display: flex;
+    align-items: center;
+    .icon {
+      margin-right: 2rem
     }
   }
 }
